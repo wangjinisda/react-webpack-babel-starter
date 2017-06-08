@@ -7,14 +7,16 @@ const FileListPlugin     = require('./plugins/FileListPlugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 const rules              = require('./rules/index');
 const ExtractTextPlugin  = require('extract-text-webpack-plugin');
+const plugins            = require('./plugins/index');
 
 module.exports = {
     resolve: {
-        extensions: [".webpack.js", ".web.js", ".js", ".jsx", ".tsx", ".ts"],
+        extensions: [".webpack.js", ".web.js", ".js", ".jsx", ".tsx", ".ts", "."],
+        plugins: [ ]
     },
     entry:   {
-        main: "./index.js", // the entry point of our app
-        vendor: ['react', 'react-dom']
+        main: "./index.tsx", // the entry point of our app
+       // vendor: ['react', 'react-dom']
     },
     output:  {
         filename: '[name].[hash].js',
@@ -64,5 +66,5 @@ module.exports = {
     ],
     performance: {
         hints: false
-    }
+    },
 };

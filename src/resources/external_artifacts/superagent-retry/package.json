@@ -1,0 +1,51 @@
+{
+  "author": {
+    "name": "Segmentio",
+    "email": "friends@segment.io"
+  },
+  "bugs": {
+    "url": "https://github.com/segmentio/superagent-retry/issues"
+  },
+  "dependencies": {},
+  "description": "A retrying layer for a superagent request",
+  "devDependencies": {
+    "express": "~3.3.8",
+    "mocha": "*",
+    "should": "*",
+    "superagent": "~0.20.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "e49b35ca96c0e3b1d0e3f49605136df0e0a028b7",
+    "tarball": "https://registry.npmjs.org/superagent-retry/-/superagent-retry-0.6.0.tgz"
+  },
+  "gitHead": "11a15b47e8e0ae9e9758d8719291bba19f640c63",
+  "homepage": "https://github.com/segmentio/superagent-retry#readme",
+  "keywords": [
+    "superagent",
+    "retry"
+  ],
+  "main": "lib/index",
+  "maintainers": [
+    {
+      "name": "segmentio",
+      "email": "friends@segment.io"
+    },
+    {
+      "name": "gjohnson",
+      "email": "gjj391@gmail.com"
+    }
+  ],
+  "name": "superagent-retry",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "superagent": "*"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/segmentio/superagent-retry.git"
+  },
+  "scripts": {},
+  "version": "0.6.0"
+}

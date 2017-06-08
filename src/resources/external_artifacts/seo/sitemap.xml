@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url><loc>https://appsource.microsoft.com/en-us/</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=analytics</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=collaboration</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=customer-service</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=finance</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=human-resources</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=it-admin</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=marketing</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=operations</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=productivity</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?category=sales</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?industry=agriculture</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?industry=distribution</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?industry=finance</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?industry=government</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?industry=healthcare</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?industry=manufacturing</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?industry=professional-services</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?industry=retail</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?product=dynamics-ax</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?product=dynamics-crm</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?product=dynamics-nav</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?product=project-madeira</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?product=power-bi</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?product=office</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/marketplace?product=azure</loc></url>
+<url><loc>https://appsource.microsoft.com/en-us/partners</loc></url>
+
+
+
+</urlset>
