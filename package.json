@@ -25,11 +25,12 @@
     "lint": "npm run lint:js && npm run lint:sass",
     "lint:js": "jshint",
     "lint:sass": "stylelint ./src/**/*.scss",
-    "start": "npm run clean && tsc && npm run begin",
-    "begin": "node .\\dist\\Server\\server.js",
+    "start": "npm run clean && npm run server:dev && npm run begin",
+    "begin": "node .\\public\\server.js",
     "test": "jest --watch --coverage",
-    "build:dev": "webpack --config ./webpackConfigs/webpack.dev.config && tsc ",
+    "build:dev": "webpack --config ./webpackConfigs/webpack.web.dev.config && tsc ",
     "build:prod": "webpack --config ./webpackConfigs/webpack.prod.config && tsc ",
+    "server:dev": "webpack --config ./webpackConfigs/webpack.server.dev.config",
     "clean": "rimraf dist && rimraf public"
   },
   "devDependencies": {
@@ -66,6 +67,7 @@
     "webpack-dev-middleware": "^1.10.2",
     "webpack-dev-server": "^2.4.5",
     "webpack-hot-middleware": "^2.18.0",
+    "webpack-node-externals": "^1.6.0",
     "webpack-shell-plugin": "^0.5.0"
   },
   "dependencies": {
