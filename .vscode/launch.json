@@ -8,7 +8,8 @@
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/src/server/index.ts",
+            "protocol": "inspector",
+            "program": "${workspaceRoot}/public/server.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
@@ -24,7 +25,8 @@
             "sourceMaps": true,
             "outFiles": [
                 "${workspaceRoot}/public/**/*.js"
-            ]
+            ],
+            "smartStep":true
         }
     ]
 }

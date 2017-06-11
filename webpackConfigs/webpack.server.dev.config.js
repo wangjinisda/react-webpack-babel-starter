@@ -25,8 +25,9 @@ module.exports = {
     output: {
         path: resolve(__dirname, '../public'),
         filename: '[name].js',
-        sourceMapFilename: "[name].js.map",
-        libraryTarget: 'commonjs2'
+        libraryTarget: 'commonjs2',
+        devtoolModuleFilenameTemplate        : '[absolute-resource-path]',
+        devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
     },
     context: resolve(__dirname, "../src"),
     devtool: "eval-source-map",
