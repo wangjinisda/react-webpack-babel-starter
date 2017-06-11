@@ -25,10 +25,11 @@ module.exports = {
     output: {
         path: resolve(__dirname, '../public'),
         filename: '[name].js',
+        sourceMapFilename: "[name].js.map",
         libraryTarget: 'commonjs2'
     },
     context: resolve(__dirname, "../src"),
-    devtool: "inline-source-map",
+    devtool: "eval-source-map",
     module: {
             rules: [
                 rules.imageRules.images,
@@ -37,7 +38,7 @@ module.exports = {
                 rules.stylesRules.cssExtractTextPlugin,
                 rules.stylesRules.scssExtractTextPlugin,
                 rules.jsRules.reactJs,
-                rules.jsRules.ts,
+                rules.jsRules.ts
             ],
     },
     externals: [
@@ -48,6 +49,11 @@ module.exports = {
             onBuildStart:['echo "Webpack Start"'], 
             onBuildEnd:['echo "Webpack End"']
         }),
+         new webpack.optimize.UglifyJsPlugin({
+            compress: {warnings: false},
+            output: {comments: false},
+            sourceMap: true
+        })
     ],
     target: 'node'
 }

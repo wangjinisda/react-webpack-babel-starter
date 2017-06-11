@@ -25,7 +25,7 @@ module.exports = {
     },
 
     context: resolve(process.cwd(), "./src"),
-    devtool: "inline-source-map",
+    devtool: "eval-source-map",
 
     devServer: {
         hot:         true, // enable HMR on the server
