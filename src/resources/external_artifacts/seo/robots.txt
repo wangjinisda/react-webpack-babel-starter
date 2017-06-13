@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /*?search=
+Disallow: /bundle*.min.js$
+
+Sitemap: https://appsource.microsoft.com/sitemap.xml
+ 
+
+

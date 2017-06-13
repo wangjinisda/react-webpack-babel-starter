@@ -1,7 +1,12 @@
-const webpack         = require("webpack");
-const {resolve}       = require("path");
-const StyleLintPlugin = require('stylelint-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack            = require("webpack");
+const {resolve}          = require("path");
+const StyleLintPlugin    = require('stylelint-webpack-plugin');
+const HtmlWebpackPlugin  = require('html-webpack-plugin');
+
+const FileListPlugin     = require('./plugins/FileListPlugin');
+const WebpackShellPlugin = require('webpack-shell-plugin');
+const rules              = require('./rules/index');
+const ExtractTextPlugin  = require('extract-text-webpack-plugin');
 
 const FileListPlugin = require('./plugins/FileListPlugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
@@ -17,7 +22,7 @@ module.exports = {
         vendor: ['react', 'react-dom']
     },
     output:  {
-        filename: '[name].[chunkhash].js',
+        filename: '[name].[hash].js',
         path:       resolve(__dirname, "../public"),
         publicPath: "/" // necessary for HMR to know where to load the hot update chunks
     },
@@ -57,7 +62,7 @@ module.exports = {
     plugins:     [
         new FileListPlugin({options: true}),
         new StyleLintPlugin(),
-        //new webpack.HotModuleReplacementPlugin(), // enable HMR globally
+        new webpack.HotModuleReplacementPlugin(), // enable HMR globally
         new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates
         new HtmlWebpackPlugin({
             filename: 'index.html',
