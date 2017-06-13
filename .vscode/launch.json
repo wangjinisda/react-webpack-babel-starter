@@ -26,7 +26,13 @@
             "outFiles": [
                 "${workspaceRoot}/public/**/*.js"
             ],
-            "smartStep":true
+            "smartStep":true,
+            "verboseDiagnosticLogging": true,
+            "sourceMapPathOverrides": {
+                "webpack:///./*":   "${cwd}/src/*",
+                "webpack:///*":   "${cwd}/src/*"
+            }
+            
         }
     ]
 }

@@ -26,8 +26,8 @@ module.exports = {
         path: resolve(__dirname, '../public'),
         filename: '[name].js',
         libraryTarget: 'commonjs2',
-        devtoolModuleFilenameTemplate        : '[absolute-resource-path]',
-        devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
+      //  devtoolModuleFilenameTemplate        : '[absolute-resource-path]',
+       // devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
     },
     context: resolve(__dirname, "../src"),
     devtool: "eval-source-map",
@@ -49,11 +49,6 @@ module.exports = {
         new WebpackShellPlugin({
             onBuildStart:['echo "Webpack Start"'], 
             onBuildEnd:['echo "Webpack End"']
-        }),
-         new webpack.optimize.UglifyJsPlugin({
-            compress: {warnings: false},
-            output: {comments: false},
-            sourceMap: true
         })
     ],
     target: 'node'
