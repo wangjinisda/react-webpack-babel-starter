@@ -31,7 +31,8 @@
     "build:dev": "webpack --config ./webpackConfigs/webpack.web.dev.config && tsc ",
     "build:prod": "webpack --config ./webpackConfigs/webpack.prod.config && tsc ",
     "server:dev": "webpack --config ./webpackConfigs/webpack.server.dev.config",
-    "clean": "rimraf dist && rimraf public"
+    "clean": "rimraf dist && rimraf public",
+    "clean:modules": "rimraf node_modules"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

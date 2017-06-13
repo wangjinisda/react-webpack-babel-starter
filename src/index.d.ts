@@ -1,6 +1,5 @@
-/*
-declare module '*.scss' {
-  const content: any;
-  export default content;
+
+declare module "*.dll" {
+    const content: any;
+    export default content;
 }
-*/

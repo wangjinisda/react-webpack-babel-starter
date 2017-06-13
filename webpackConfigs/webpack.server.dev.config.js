@@ -36,10 +36,9 @@ module.exports = {
                 rules.imageRules.images,
                 rules.fontRules.fonts,
                 rules.jadeRules.jade,
-                rules.stylesRules.cssExtractTextPlugin,
-                rules.stylesRules.scssExtractTextPlugin,
                 rules.jsRules.reactJs,
-                rules.jsRules.ts
+                rules.jsRules.ts,
+                rules.fileRuls.files
             ],
     },
     externals: [
