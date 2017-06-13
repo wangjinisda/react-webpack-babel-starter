@@ -30,7 +30,7 @@
             "verboseDiagnosticLogging": true,
             "sourceMapPathOverrides": {
                 "webpack:///./*":   "${cwd}/src/*",
-                "webpack:///*":   "${cwd}/src/*"
+                "webpack:///*":     "*"
             }
             
         }
