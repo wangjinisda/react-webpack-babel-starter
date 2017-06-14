@@ -27,7 +27,8 @@ module.exports = {
         filename: '[name].js',
         libraryTarget: 'commonjs2',
         devtoolModuleFilenameTemplate        : '[absolute-resource-path]',
-        devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
+        devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]',
+        publicPath: resolve(__dirname, '../public/')
     },
     context: resolve(__dirname, "../src"),
     devtool: "eval-source-map",

@@ -76,6 +76,7 @@
     "@types/react-dom": "^15.5.0",
     "@types/react-hot-loader": "^3.0.1",
     "@types/webpack-env": "^1.13.0",
+    "edge": "^7.10.1",
     "express": "^4.15.3",
     "jade": "^1.11.0",
     "typescript": "^2.3.4"

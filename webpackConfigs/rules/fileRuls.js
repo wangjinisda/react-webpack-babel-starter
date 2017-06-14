@@ -1,7 +1,7 @@
 const rules = {
     files: {
           test: /\.(dll|DLL)(\?[a-z0-9]+)?$/,
-          loader: 'file-loader?name=res/[name].[ext]'
+          loader: 'file-loader?name=/res/[name].[ext]'
     },
 }
 
