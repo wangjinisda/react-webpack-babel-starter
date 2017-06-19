@@ -15,8 +15,8 @@ module.exports = {
         plugins: [ ]
     },
     entry:   {
-        main: "./index.tsx", // the entry point of our app
-       // vendor: ['react', 'react-dom']
+        main: "./client/index.tsx", // the entry point of our app
+       vendor: ['react', 'react-dom']
     },
     output:  {
         filename: '[name].[hash].js',
