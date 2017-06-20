@@ -15,7 +15,7 @@ module.exports = {
         plugins: [ ]
     },
     entry:   {
-        main: "./client/entry.tsx", // the entry point of our app
+        main: "./client/index.js", // the entry point of our app
        vendor: ['react', 'react-dom']
     },
     output:  {
