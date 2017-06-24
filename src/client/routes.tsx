@@ -1,10 +1,9 @@
-import React from 'react'
-import { Route, IndexRoute } from 'react-router'
-
+import * as React from 'react'
 import MainLayout from './components/MainLayout'
 import App from './components/App'
 import NoMatch from './components/NoMatch'
 import TopStories from './components/TopStories'
+let { Route, IndexRoute } = require('react-router');
 
 const routes = (
   <Route path="/" component={MainLayout}>

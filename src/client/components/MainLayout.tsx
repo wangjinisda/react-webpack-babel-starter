@@ -1,11 +1,10 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import * as React from 'react'
+let  Helmet = require('react-helmet');
 import { Link } from 'react-router'
 
-const MainLayout = React.createClass({
 
-  render: function() {
-
+class MainLayout extends React.Component<any, any> {
+  render() {
     return (
       <div className="app">
         <Helmet
@@ -26,6 +25,7 @@ const MainLayout = React.createClass({
       </div>
     )
   }
-})
+}
+
 
 export default MainLayout

@@ -1,4 +1,5 @@
-export function topStoriesReducer(state, action) {
+/// <reference path="./../../typings/index.d.ts" />
+export function topStoriesReducer(state: any, action: any) {
 
   if (state === undefined) {
     return { data: [] }

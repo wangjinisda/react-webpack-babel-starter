@@ -1,9 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import * as React from 'react'
+let Helmet =require('react-helmet')
 
-const NoMatch = React.createClass({
 
-  render: function() {
+class NoMatch extends React.Component<any, any>{
+  render() {
     return (
       <div>
         <Helmet title="Page not found" />
@@ -11,7 +11,6 @@ const NoMatch = React.createClass({
       </div>
     )
   }
-
-})
+}
 
 export default NoMatch
