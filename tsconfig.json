@@ -6,7 +6,13 @@
     "module": "commonjs",
     "target": "es5",
     "jsx": "react",
-    "allowJs": true
+    "allowJs": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "experimentalDecorators": true,
+    "noEmitOnError": true,
+    "allowSyntheticDefaultImports": true,
+    "noLib": false,
+    "declaration": false
   },
   "include": [
         "./src/**/*"

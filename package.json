@@ -77,6 +77,8 @@
     "@types/react-hot-loader": "^3.0.1",
     "@types/react-redux": "^4.4.43",
     "@types/react-router": "^3.0.12",
+    "@types/superagent": "^3.5.0",
+    "@types/uuid": "^3.0.0",
     "@types/webpack-env": "^1.13.0",
     "edge": "^7.10.1",
     "es6-promise": "^3.1.2",
@@ -91,7 +93,11 @@
     "react-router-redux": "^4.0.4",
     "redux": "^3.5.2",
     "redux-thunk": "^2.0.1",
-    "typescript": "^2.3.4"
+    "stacktrace-js": "^2.0.0",
+    "superagent": "^3.5.2",
+    "superagent-retry": "^0.6.0",
+    "typescript": "^2.3.4",
+    "uuid": "^3.1.0"
   },
   "jest": {
     "moduleFileExtensions": [
