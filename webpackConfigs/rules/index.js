@@ -4,7 +4,7 @@ const jsRules = require("./jsRules")
 const stylesRules = require("./stylesRules")
 const imageRules = require("./imageRules")
 const mapRules = require("./mapRules")
-const fileRuls = require("./fileRuls")
+const fileRuls = require("./fileRules")
 
 
 

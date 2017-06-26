@@ -32,7 +32,8 @@
     "build:prod": "webpack --config ./webpackConfigs/webpack.prod.config && tsc ",
     "server:dev": "webpack --config ./webpackConfigs/webpack.server.dev.config",
     "clean": "rimraf dist && rimraf public",
-    "clean:modules": "rimraf node_modules"
+    "clean:modules": "rimraf node_modules",
+    "build:scss" : "webpack --config ./webpackConfigs/others/webpack.scss.dev.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
