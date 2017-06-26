@@ -3,6 +3,20 @@ import { ITelemetryData } from './models/models';
 import { SpzaInstrumentService } from './services/telemetry/spza/spzaInstrument';
 import { getWindow } from './services/window';
 
+let { Router, browserHistory } = require('react-router');
+let { syncHistoryWithStore, push, replace, goBack, goForward } = require('react-router-redux');
+
+let isEmbedded = false;
+let previousPage = '';
+export let appHistory: any = null;
+
+export const historyCreator = (store: any) =>{
+    return (): void => {
+        appHistory = syncHistoryWithStore(browserHistory, store)
+        return appHistory;
+    }
+}
+
 
 // These object defines valid queryParams for the different states in the app.  This allows us to
 // 'smartly' drop and add query parameters when navigating between pages
