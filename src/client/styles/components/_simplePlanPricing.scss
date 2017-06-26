@@ -1,0 +1,15 @@
+.pricing.simplePlanPricing {
+    font-size: 12px;
+    table {
+        td {
+            vertical-align: top;
+        }
+        .title {
+            font-weight: bold;
+            min-width: 150px;
+        }
+        .price {
+            min-width: 120px;
+        }
+    }
+}

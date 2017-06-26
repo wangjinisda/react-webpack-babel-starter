@@ -1,0 +1,365 @@
+$height: 36px;
+$color-border: #A9A9A9;
+$dialog-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+.spza-c-search {
+  &.react-selectize.root-node {
+    float: right;
+    min-width: 162px;
+    max-width: 500px;
+    z-index: 1000;
+    margin: 0 8px 0 20px;
+    width: 320px;
+    -webkit-transition: width .25s ease-out; // todo: vendorize
+    // Hide the dropdown unless there is input
+    @media(max-width: 1180px){
+      max-width: 280px;
+    }
+    @media(max-width: 925px){
+      max-width: 260px;
+    }
+    @media(max-width: 870px){
+      max-width: 100px;
+    }
+    &:not(.open),
+    &:not(.spza-c-search-hasinput) {
+      .dropdown-menu-wrapper {
+        opacity: 0;
+      }
+    }
+    &.open {
+      .react-selectize-placeholder {
+        opacity: 0;
+      }
+    }
+    &.open, // remove this open
+    //&:spza-c-search-hasfocus,
+    &.spza-c-search-hasinput {
+      width: 500px;
+    }
+    &.disabled {
+      pointer-events: none;
+    }
+    .react-selectize-control,
+    button {
+      float: $left;
+      height: 100%;
+      outline: 0;
+      background-color: $color-background;
+    }
+    .react-selectize-control {
+      display: inline;
+      box-sizing: border-box;
+      width: 100%;
+      height: $height;
+      border: 1px solid $color-border;
+      &:active,
+      &:focus {
+        border-color: $color-accent;
+      }
+      &::-ms-clear {
+        display: none;
+      }
+      .react-selectize-placeholder {
+        // todo: why is this not easier to position with vertical-alignment?
+        display: block;
+        line-height: 34px;
+        overflow: hidden;
+        padding-left: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: absolute;
+        max-width: calc(100% - 135px);
+        -webkit-user-select: none; // todo: vendorize
+        @media(max-width: 870px){
+          max-width: 66px;
+        }
+      }
+      .react-selectize-toggle-button-container{
+        width: 34px;
+        height: 34px;
+        float: right;
+
+        button {
+           &:focus, &:active{
+              background-color: transparent;
+           }
+        }
+      }
+      button {
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        margin: 1px;
+        padding: 9px;
+        transition: color 0.1s, background-color 0.1s;
+        border: 0;
+        &:hover {
+          color: $color-accent;
+        }
+        &:active,
+        &:focus {
+          color: $color-background;
+          background: $color-accent;
+        }
+        &:before {
+          content: $glyph-search;
+          text-indent: 0;
+          color: #7f7f7f;
+          font-size: 16px;
+        }
+      }
+      .react-selectize-search-field-and-selected-values {
+        float: left;
+        width: calc(100% - 34px);
+        display: flex;
+        min-height: $height;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        vertical-align: middle;
+        .resizable-input {
+          max-width: 500px;
+          min-width: 250px;
+          height: 36px;
+          padding: 0 10px;
+          border: none;
+          background: none;
+          outline: none;
+          font-size: 1em;
+          @media(max-width: 870px){
+            min-width: 125px;
+          }
+        }
+
+        .resizable-input::-ms-clear{
+          display: none !important;
+          width : 0 !important;
+          height: 0 !important;
+        }
+
+        .resizable-input::-ms-reveal{
+            display: none !important;
+            width : 0 !important;
+            height: 0 !important;
+        }
+
+        .value-wrapper {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  &.simple-select.react-selectize.root-node {
+    .simple-value {
+      margin: 2px;
+      span {
+        display: inline-block;
+        vertical-align: center;
+      }
+    }
+  }
+  // wraps the dropdown-menu div, exists only when props.transition-enter or props.transition-leave or both are true
+  // present inside document.body if props.tether is true, otherwise its present inside the root-node div (above)
+  &.react-selectize.dropdown-menu-wrapper {
+    z-index: 999;
+    position: absolute;
+    &.tethered {
+      min-width: 300px;
+    }
+    &:not(.tethered) {
+      width: 100%;
+    }
+  }
+  // wraps the dropdown-menu div, exists only when props.transition-enter or props.transition-leave or both are true
+  // present inside document.body if props.tether is true, otherwise its present inside the root-node div (above)
+  &.react-selectize.dropdown-menu-wrapper.default {
+    //margin-top: $height;            // todo: my way of positioning it under the box?
+    overflow: hidden;
+    position: relative;
+    max-height: 520px;
+    border: 1px solid $color-border;
+    box-shadow: $dialog-shadow; // todo: Use standard SCSS mixin
+    font-size: 13px;
+    font-weight: 600;
+    background: white;
+    margin-top: 1px;
+    
+    @media(max-width: 1180px){
+      min-width: 415px;
+    }
+
+    @media(max-width: 926px){
+      min-width: 395px;
+    }
+
+    @media only screen and (max-width: 870px){
+      min-width: 295px;
+    }
+    .dropdown-menu {
+    //   &.custom-enter-active,
+    //   &.custom-leave-active {
+    //     transition: transform 0.05s 0.05s ease;
+    //   }
+      &.flipped {
+        &.custom-enter {
+          transform: translateY(100%);
+        }
+        &.custom-enter-active {
+          transform: translateY(0%);
+        }
+        &.custom-leave {
+          transform: translateY(0%);
+        }
+        &.custom-leave-active {
+          transform: translateY(100%);
+        }
+      }
+      &:not(.flipped) {
+        &.custom-enter {
+          transform: translateY(-100%);
+        }
+        &.custom-enter-active {
+          transform: translateY(0%);
+        }
+        &.custom-leave {
+          transform: translateY(0%);
+        }
+        &.custom-leave-active {
+          transform: translateY(-100%);
+        }
+      }
+    }
+  }
+  // dropdown-menu present in document.body when props.tether is true
+  &.react-selectize.dropdown-menu.default {
+    // &.flipped {
+    //     border-top-left-radius: 4px;
+    //     border-top-right-radius: 4px;
+    // }
+    // &:not(.flipped) {
+    //     border-color: #b3b3b3 #cccccc #d9d9d9;
+    //     border-bottom-left-radius: 4px;
+    //     border-bottom-right-radius: 4px;
+    // }
+    > .groups {
+      > div {
+        position: relative;
+        &:first-child {
+          .groupSeparator {
+            border: none;
+          }
+        }
+        .options {
+          padding: 8px 0;
+        }
+      }
+
+      .searchResultGroup {
+          line-height: 21.5px;
+          font-size: 16px;
+          margin: 0 8px;
+
+          &.searchResultFirstGroup {
+              padding-top: 8px;
+              border-top: 1px solid #e8e8e8;
+
+              .searchResultHint {
+                  float: right;
+                  font-size: 11.9px;
+                  color: #333333;
+                  line-height: 14.9px;
+              }
+          }
+      }
+    }
+    .no-results-found {
+      color: #aaa !important;
+      font-style: oblique;
+      padding: 8px 10px;
+    }
+    .simple-group-title {
+      background-color: #fafafa;
+      padding: 8px 8px;
+    }
+
+    .groupSeparator {
+      .headerText {
+        position: absolute;
+        font-size: 10px;
+        font-weight: 300;
+        top: 5px;
+        right: 10px;
+        color: #666;
+        z-index: 9;
+      }
+    }
+    .option-wrapper {
+      cursor: pointer;
+      $icon-size: 40px;
+      $padding: 5px;
+      &:hover {
+        background-color: #f8f8f8;
+      }
+      &.highlight {
+        background: #f2f9fc;
+        color: #333;
+      }
+      > .Item {
+        padding: $padding 10px $padding 0;
+        line-height: 36px;
+        &.App {
+          height: $icon-size + (2 * $padding);
+          padding-left: 56px; // Account for icon on app items
+          line-height: 16px;
+        }
+      }
+      > .Item:hover {
+        background-color: #f8f8f8;
+      }
+      > .Item > .Icon {
+        position: absolute;
+        left: $padding * 2;
+        top: $padding;
+        width: $icon-size;
+        height: $icon-size;
+        background-size: $icon-size;
+        background-repeat: no-repeat;
+      }
+      > .Item > div > header {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 16px;
+        margin-top: 4px;
+
+        @media(max-width: 1180px){
+          max-width: 200px;
+        }
+      }
+      > .Item > div > .Description {
+        font-size: 12px;
+        margin-top: -1px;
+        color: #666;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.simple-option {
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  &.searchShowAll {
+      font-size: 16.1px;
+      line-height: 21.5px;
+      color: #2277BC;
+  }
+}
+
+.narrowItem {
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

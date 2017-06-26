@@ -1,0 +1,300 @@
+@mixin text-overflow-style() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+$tileLength: 48px;
+.spza_tileWrapper {
+    height: 316px;
+    width: 200px;
+    border: 1px solid #E0E0E0;
+    background-color: #ffffff;
+    margin: 0 0 32px 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    color: #A0A0A0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: box-shadow 0.5s, border 0.5s;
+    display: none;
+    line-height: 1.1em;
+    &.tile0 {
+        display: inline-block;
+    }
+    // these media query numbers are calculated manually for appSource website
+    @media only screen and (min-width: 700px) {
+        &.tile1 {
+            display: inline-block;
+        }
+    }
+    @media only screen and (min-width: 980px) {
+        &.tile2 {
+            display: inline-block;
+        }
+    }
+    @media only screen and (min-width: 1225px) {
+        &.tile3 {
+            display: inline-block;
+        }
+    }
+    @media only screen and (min-width: 1460px) {
+        &.tile4 {
+            display: inline-block;
+        }
+    }
+    @media (max-width: 539px) {
+        width: calc(100% - 20px);
+        margin: 0 20px 20px 20px;
+        height: auto;
+        min-height: 100px;
+        align-items: stretch;
+        padding-left: 100px;
+    }
+    &:hover,
+    &:focus {
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+        color: #A0A0A0;
+        .topBackground {
+            opacity: 0.8;
+        }
+    }
+    .topBackground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 68px;
+        width: 100%;
+        transition: opacity 0.25s;
+        opacity: 0.1;
+        overflow: hidden;
+        color: transparent;
+        >svg {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+        }
+        @media (max-width: 539px) {
+            right: auto;
+            bottom: 0;
+            width: 100px;
+            height: auto;
+        }
+        .backgroundImg {
+            background-position: center;
+            background-size: 400px 400px;
+            -webkit-filter: blur(30px) saturate(100%);
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .tileThumbnail {
+        width: $tileLength;
+        height: $tileLength;
+        z-index: 2;
+        left: calc(50% - 24px);
+        top: 10px;
+        position: absolute;
+        background-color: transparent;
+        display: table;
+        &>div {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        @media (max-width: 539px) {
+            left: 22px;
+        }
+        .thumbnailSpacer {
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .ready {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+        .delayLoadImage {
+            color: transparent;
+        }
+        .thumbnail {
+            max-width: $tileLength;
+            max-height: $tileLength;
+            img {
+                max-width: $tileLength;
+                max-height: $tileLength;
+            }
+        }
+    }
+    .tileContent {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        bottom: 44px;
+        color: #666;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 1.3em;
+        text-align: center;
+        @media (max-width: 539px) {
+            float: left;
+            position: absolute;
+            top: 0;
+            left: 100px;
+            height: 100%;
+            text-align: left;
+        }
+        .title {
+            padding: 12px 10px 6px 10px;
+            font-size: 16px;
+            color: black;
+            max-height: 68px;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 18px;
+            @media (max-width: 539px) {
+                height: 32px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        .provider {
+            @include text-overflow-style;
+            padding: 0 10px 2px 10px;
+        }
+        .description {
+            line-height: 15px;
+            text-overflow: clip;
+            overflow: hidden;
+            font-size: 12px;
+            padding: 0 10px 0 10px;
+            color: #565656;
+            max-height: 60px;
+            @media (max-width: 539px) {
+                height: 15px;
+                @include text-overflow-style;
+            }
+        }
+        .product {
+            @include text-overflow-style;
+            padding: 0px 10px 0 10px;
+        }
+        .providerSection {
+            margin-bottom: 8px;
+            color: #565656;
+        }
+        .provider {
+            line-height: 12px;
+            font-weight: 400;
+            font-size: 10px;
+        }
+        .product {
+            line-height: 10px;
+            font-size: 8px;
+            font-weight: 400 !important;
+        }
+    }
+    .tileFooter {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 44px;
+        justify-content: center;
+        cursor: auto;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        @media (max-width: 539px) {
+            display: none;
+        }
+        .getButton {
+            margin: 5.5px;
+            background-color: white;
+            color: #0078D7;
+            font-size: 12px;
+            &:hover,
+            &:focus {
+                background-color: #0078D7;
+                color: white;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+    .startingPrice {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        text-align: left;
+        .pricingText {
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 400;
+            color: black;
+        }
+        .additionalPurchaseText {
+            font-size: 10px;
+            line-height: 11px;
+            font-weight: 400;
+            color: black;
+            width: 110px;
+        }
+    }
+}
+
+
+/*
+    -ms-high-contrast is Microsoft-specific (and only available in IE 10+), it will only be parsed in Internet Explorer 10 and greater.
+    -ms-high-contrast supports two values: none and active. So to target IE10+ regardless of the property’s setting, use this media query
+*/
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .spza_tileWrapper {
+        .topBackground {
+            opacity: 0.1;
+        }
+        &:hover,
+        &:focus {
+            .topBackground {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+// CSS changes for Edge Browser
+_:-ms-lang(x),
+_:-webkit-full-screen,
+.spza_tileWrapper {
+    .topBackground {
+        opacity: 0.1;
+    }
+    &:hover,
+    &:focus {
+        .topBackground {
+            opacity: 0.8;
+        }
+    }
+}
+
+// CSS changes for Firefox Browser
+@-moz-document url-prefix() {
+    .spza_tileWrapper {
+        .topBackground {
+            opacity: 0.1;
+        }
+        &:hover,
+        &:focus {
+            .topBackground {
+                opacity: 0.8;
+            }
+        }
+    }
+}

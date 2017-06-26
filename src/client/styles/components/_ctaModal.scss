@@ -1,0 +1,142 @@
+.spza_dialog .ctaModal {
+    width: 750px;
+    height: 310px;
+    z-index: 3000;
+    .prompContainer {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        .toolBar {
+            z-index: 1;
+            button {
+                background-color: transparent;
+            }
+        }
+        .contentHeader {
+            margin-left: 20px;
+        }
+        .content {
+            display: table;
+            width: 100%;
+            height: 100%;
+            &>* {
+                display: table-cell;
+            }
+            .left {
+                border-right: solid 1px #adafb1;
+                background-color: #e7e9ea;
+                padding: 20px;
+                .contentHeader {
+                    margin-top: 0;
+                    margin-left: 0;
+                    padding: 0;
+                    margin-bottom: 16px;
+                }
+                .trunk {
+                    margin: 0;
+                    .miniIcon {
+                        margin-right: 12px;
+                        margin-bottom: 20px;
+                        width: 64px;
+                        height: 64px;
+                    }
+                    .trunkContent {
+                        padding-top: 0;
+                        margin-bottom: 20px;
+                        .header {
+                            font-weight: 600;
+                        }
+                    }
+                    .detail {
+                        clear: both;
+                        box-sizing: border-box;
+                        h2 {
+                            margin: 10px 0 6px;
+                            font-size: 15px;
+                            font-weight: normal;
+                        }
+                        select {
+                            width: 100%;
+                            max-width: none;
+                            margin: 0;
+                            padding: 0 6px;
+                        }
+                        .plan {
+                            .planTitle {
+                                font-weight: bold;
+                            }
+                            select {
+                                margin: 0; 
+                                border: 1px solid #AFAFAF;     
+                                -webkit-box-sizing: border-box;
+                                -moz-box-sizing: border-box;
+                                box-sizing: border-box;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                            }
+                            select::-ms-expand {
+                                display: none;
+                            }
+                            select.c-select {
+                                background-image:
+                                    linear-gradient(45deg, transparent 50%, gray 50%),
+                                    linear-gradient(135deg, gray 50%, transparent 50%);
+                                background-position:
+                                    calc(100% - 15px) calc(1em + 0px),
+                                    calc(100% - 10px) calc(1em + 0px);
+                                background-size:
+                                    5px 5px,
+                                    5px 5px,
+                                    1px 1.5em;
+                                background-repeat: no-repeat;
+                            }
+                        }
+                        .planContent {
+                            display: table;
+                            width: 100%;
+                            box-sizing: content-box;
+                            .row {
+                                display: table-row;
+                                &>* {
+                                    display: table-cell;
+                                    padding-top: 10px;
+                                }
+                                label {
+                                    width: 64px;
+                                    padding-right: 10px;
+                                }
+
+                                .infraCosts {
+                                    font-size: 13px;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .right {
+                width: 240px;
+                position: relative;
+                box-sizing: border-box;
+                padding: 20px;
+                .terms {
+                    top: 10px;
+                    .consentTerms {
+                        float: none;
+                    }
+                }
+                .consentBottomBar {
+                    position: absolute;
+                    bottom: 20px;
+                    width: 100%;
+                    right: 0;
+                    padding: 0 20px;
+                    .requestButton {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

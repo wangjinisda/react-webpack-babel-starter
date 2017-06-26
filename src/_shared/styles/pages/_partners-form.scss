@@ -1,0 +1,138 @@
+.context-partners-form-page {
+    /* Alignment */
+    [data-grid=col-12] {
+        text-align: center;
+    }
+
+    .context-form {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    /* Spacing */
+    .context-form-header {
+        padding: 37px 0 45px;
+    }
+
+    .context-form-header {
+        .c-heading-2 {
+            padding-top: 0;
+        }
+
+        // Override MWF theme-light default color
+        a.c-hyperlink,
+        a.c-hyperlink:focus,
+        a.c-hyperlink:visited,
+        a.c-hyperlink:active,
+        a.c-hyperlink:hover {
+            color: $color-accent;
+        }
+    }
+
+    [data-grid=col-12] > p:first-child {
+        padding-top: 45px;
+        margin-bottom: -15px;
+    }
+
+    .c-heading-3 {
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .c-heading-5 {
+        padding-bottom: 0;
+    }
+
+    /* Custom form component styles */
+    input.c-text-field[type=text].f-flex,
+    .c-select,
+    .c-textarea textarea {
+        max-width: 600px;
+    }
+
+    .c-textarea textarea {
+        width: 100%;
+    }
+
+    .c-label + .c-select {
+        margin-top: 0;
+    }
+
+    .c-label + .c-select > select {
+        border-radius: 0;
+    }
+
+    .c-heading-5 + .c-label {
+        margin-top: 12px;
+    }
+
+    .spza-c-checkbox-text-field {
+        padding-left: 20px;
+    }
+
+    button.c-button {
+        margin: 60px 0;
+    }
+
+    /* Required star */
+    .spza-c-required {
+        color: red;
+        font-size: 15px;
+    }
+
+    .context-form .spza-c-required {
+        display: inline-block;
+        margin-left: -10px;
+    }
+
+    .context-form .c-label {
+        font-size: 15px
+    }
+
+    .context-form .c-checkbox .c-label {
+        font-size: 13px
+    }
+
+    /* 648px = 600px max width + 24px padding on each side */
+    @media only screen and (min-width: 648px) {
+        .context-form {
+            width: 600px;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        [data-grid=col-12] > p:first-child {
+            padding-top: 60px;
+            margin-bottom: 0;
+        }
+
+        .context-form-header {
+            padding: 52px 0 60px;
+        }
+
+        [data-grid=col-6] {
+            margin-top: 36px;
+        }
+
+        [data-grid=col-6] > .c-heading-5 {
+            padding-top: 0;
+        }
+
+        [data-grid=col-6]:first-of-type {
+            padding-right: 24px;
+            border-right: 1px solid rgba(0,0,0,.6);
+        }
+
+        [data-grid=col-6]:last-of-type {
+            padding-left: 24px;
+        }
+    }
+
+    .reviewGuidelinesLink {
+        cursor: pointer;
+        color: #0078D7;
+    }
+
+}

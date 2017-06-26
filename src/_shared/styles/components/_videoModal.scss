@@ -1,0 +1,50 @@
+.spza_videoClass{
+    max-width: 1280px;
+    width: 100% !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 !important;
+
+    &.videoDisplay{
+        width: 840px !important;
+    }
+    
+    .dialogContent{
+        height: inherit;
+
+        .toolBar{
+            height: 36px;
+
+            .cancel {
+                border: none;
+                background: white;
+                float: right;
+                padding: 0 6px;
+                
+                span {
+                    &:after {
+                        content: $glyph-cancel;
+                        width: 36px;
+                        height: 36px;
+                        line-height: 36px;
+                    }
+                }
+            }
+        }
+
+        .videoContainer{
+            align-items: center;
+            display: flex;
+            display: -ms-flexbox;
+
+            iframe {
+                min-height: 472px;
+            }
+
+            img {
+                -ms-flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -10,7 +10,6 @@ import routes from './routes'
 import { appHistory, historyCreator } from './../_shared/routerHistory'
 
 let { Router, browserHistory } = require('react-router');
-let { syncHistoryWithStore } = require('react-router-redux');
 
 let __INITIAL_STATE__ = {}
 const store = configureStore(browserHistory, __INITIAL_STATE__)

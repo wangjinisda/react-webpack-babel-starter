@@ -1,0 +1,147 @@
+.spza_galleryHeader{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px;
+
+    .icon{
+        margin-right: 15px;
+        width: 72px;
+        height: 72px;
+
+        .thumbnail{
+            width: 72px;
+            height: 72px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .header{
+        margin: 0px 20px 0px;
+
+        .headerName{
+            font-size: 24px;
+            font-weight: 200;
+
+            .segueHeaderLink {
+                font-size: 15px;
+                font-weight: 200;
+                color: #0078D7;
+                margin-left: 40px;
+                
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        .segueHeader{
+            font-size: 24px;
+            font-weight: 200;
+            color: #000;
+            margin-top: 60px;
+        }
+
+        .segueSubHeader {
+            font-size: 15px;
+            font-weight: 200;
+            color: #000;
+            margin-top: 20px;
+            display:inline-block;
+        }
+
+        .learnMore{
+            margin-bottom: 2px;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 15px;
+            color: #0078D7;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .appPromotionPane {
+        margin: 0px 20px 0px;
+    }
+}
+
+.spza_regions{
+    width: 68%;
+    max-width: 1600px;
+    align-self: center;
+    margin-bottom: 30px;
+
+    .regionTitle{
+        padding: 0;
+        margin: 30px 0 20px 0;
+    }
+
+    .details{
+        padding-bottom: 30px;
+
+        .column{
+            float: left;
+            width: 23.5%;
+
+            @media screen and (max-width: 679px) and (min-width: 540px){
+                width: 49%;
+            }
+
+            @media screen and (max-width: 539px){
+                width: 100%;
+            }
+
+            > li{
+                list-style-type:none
+            }
+        }
+    }
+}
+
+.galleryHeader {
+    min-width: 400px;
+}
+
+.galleryHeader_tileFilters {
+    margin: 12px 0 12px 20px;
+
+    .tileFilter {
+        display: inline-block;
+        background-color: #0078D7;
+        color: white;
+        cursor: pointer;
+        font-size: 12px;
+        margin: 0 10px 5px 0;
+        min-height: 22px;
+        min-width: 50px;
+        padding: 4px 10px 4px 10px;
+
+        &:hover{
+            background-color: #006cc2;
+        }
+    }
+
+    .filterCloseIcon {
+        background-size: 10px;
+        width: 10px;
+        height: 10px;
+        background-position: center right 6px;
+        background-color: #0078d7;
+        background-repeat: no-repeat;
+        color: white;
+        margin: 0 0 3px 10px;
+    }
+}
+
+.resetButton {
+    float: right;
+}

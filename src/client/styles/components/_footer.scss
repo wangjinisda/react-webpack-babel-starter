@@ -1,0 +1,120 @@
+// Start Mooncake
+.macFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #323a45;
+
+  .macFooterContent {
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px 0 10px 0;
+
+    .menuTitle {
+      font-family: 'Segoe UI';
+      font-size: 14px;
+      color: #89919c;
+      line-height: 30px;
+    }
+
+    .topSection {
+      min-height: 48px;
+      margin-bottom: 12px;
+      overflow: hidden;
+
+      .menu {
+        float: left;
+        width: 25%;
+        margin-bottom: 12px;
+
+        .menuItem {
+          font-family: 'Segoe UI';
+          font-size: 14px;
+          color: #fff;
+          line-height: 30px;
+
+          &:hover {
+            color: #00a3d9;
+          }
+        }
+      }
+    }
+
+    .bottomSection {
+      border-top: solid 1px #5e6d81;
+      padding-top: 12px;
+      clear: both;
+      overflow: hidden;
+      .vertical-icon{
+        vertical-align: middle;
+        width: 16px;
+        margin-bottom: 6px;
+      }
+      .menuTitle {
+        font-family: 'Segoe UI';
+        font-size: 12px;
+        color: #fff;
+        line-height: 30px;
+      }
+
+      .globe {
+        float: left;
+        margin-left: 60px;
+        margin-right: 5px;
+        filter: invert(100%);
+
+        @media(max-width: 1024px) {
+          margin-left: 0px;
+        }
+      }
+
+      .menu {
+        float: left;
+      }
+
+      .menuWidth24 {
+        width: 24%;
+      }
+
+      .menuTitleRight {
+        float: right;
+        line-height: 22px;
+        color: #fff;
+        font-size: 14px;
+      }
+
+      .billingCountry {
+        float: left;
+
+        .billingCountryHeader {
+          float: left;
+          font-family: 'Segoe UI';
+          font-size: 12px;
+          color: white;
+          line-height: 22px;
+          margin-right: 15px;
+        }
+
+        .billingRegionSelector {
+          position: relative;
+          z-index: 999;
+          line-height: 22px;
+          height: 22px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .clickableItem {
+      cursor: pointer;
+      line-height: 22px;
+      float: left;
+      margin-right: 25px;
+
+      &:hover {
+        color:#00a3d9;
+      }
+    }
+  }
+}
+// End Mooncake

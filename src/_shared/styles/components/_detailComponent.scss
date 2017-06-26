@@ -1,0 +1,370 @@
+$metadataWidth: 164px;
+@mixin text-overflow-style() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.spza_detailContainer {
+    padding-bottom: 50px;
+    max-width: $max-content-width;
+    align-self: center;
+    width: 90%;
+    height: 100%;
+    .navigationBar {
+        height: 60px;
+        .breadcrumb {
+            @include text-overflow-style();
+            .goBackButton,
+            .appTabButton {
+                background-color: transparent;
+                margin: 0;
+                font-size: 14px;
+                line-height: 60px;
+                max-width: none;
+                min-width: initial;
+                display: inline;
+                border: none;
+            }
+            .goBackButton {
+                padding: 0 10px 0 0;
+                &:hover {
+                    color: #0078D7;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+            .appTabButton {
+                padding: 0 6px;
+                cursor: default;
+            }
+            span {
+                line-height: 57px;
+                font-size: 11px;
+                &:before {
+                    content: $glyph-chevron-right;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+    .detailContent {
+        display: flex;
+        .metadata {
+            width: $metadataWidth;
+            height: 100%;
+            flex: none;
+            margin-right: 30px;
+            text-align: center;
+            .cell {
+                margin-bottom: 12px;
+                text-align: left;
+                header {
+                    color: #1a1a1a;
+                    font-weight: 600;
+                    font-size: 12px;
+                    margin-top: 8px;
+                }
+                span{
+                    font-size: 12px;
+                }
+            }
+            .c-hyperlink {
+                 text-align: left;
+                 font-size: 12px;
+                 display: block;
+            }
+            .iconHost {
+                width: $metadataWidth;
+                height: $metadataWidth;
+                margin-bottom: 12px;
+                .thumbnailSpacer {
+                    height: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .appLargeIcon {
+                    max-width: $metadataWidth;
+                    max-height: $metadataWidth;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+            .requestButton {
+                width: 100%;
+                margin-top: 0 0 8px 0;
+                font-size: 13px;
+                letter-spacing: 0.975px;
+                line-height: 16.9px;
+                text-transform: uppercase;
+                @include text-overflow-style();
+            }
+            .metaDetails {
+                margin-top: 8px;
+                padding: 0 0 0 1px;
+                font-size: 12px;
+                .cell {
+                    margin-bottom: 12px;
+                    text-align: left;
+                    header {
+                        color: #1a1a1a;
+                        margin-bottom: 2px;
+                        font-weight: 600;
+                    }
+                    .thunk {
+                        background: #F2F2F2;
+                        .miniIcon {
+                            margin-right: 6px;
+                            height: 30px;
+                            width: 30px;
+                            float: left;
+                        }
+                        .forApp {
+                            line-height: 30px;
+                            padding-right: 16px;
+                            @include text-overflow-style();
+                        }
+                    }
+                    .detailsRating {
+                        .c-glyph {
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 2px;
+                        }                        
+                        .c-glyph:after {
+                            color: #0078D7;
+                            font-size: 18px;
+                        }
+                        .c-glyph:before {
+                            font-size: 18px;
+                        }                        
+                    }
+                    .ratingsCount {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }                
+                    .detailsCategories {
+                        color: #0078D7;
+                        cursor: pointer;
+                        &.d365FilterGroupHeader {
+                            display: none;
+                        }
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    >span,
+                    >a {
+                        display: block;
+                    }
+                }
+
+                .productsSupported {
+                    span {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        .content {
+            flex: 1;
+            position: relative;
+            .spza_group {
+                .header_wrap {
+                    margin-top: 0;
+                    >h3 {
+                        padding: 0;
+                    }
+                    .spza_headerText {
+                        padding: 25px 0px 26px;
+                    }
+                }
+                .spza_pagerWrapper {
+                    margin: 0 0 0 -20px;
+                }
+            }
+            .appDetailHeader {
+                width: 100%;
+                font-size: 14px;
+                margin-bottom: 20px;
+                @include text-overflow-style();
+                .titleHeader,
+                .titleSubHeader {
+                    padding: 0;
+                }
+                .titleHeader {
+                    font-size: 34px;
+                    font-weight: 100;
+                    line-height: 40px;
+                    padding-bottom: 2px;
+                }
+                .titleSubHeader {
+                    font-size: 20px;
+                    font-weight: 200;
+                    line-height: 26px;
+                    opacity: 0.8;
+                }
+            }
+            .overview {
+                min-height: 200px;
+                padding-bottom: 20px;
+                .detailsContentWrapper {
+                    display: flex;
+                    flex-direction: row;
+                    @media (max-width: 1200px) {
+                        flex-direction: column;
+                    }
+                }
+                .appDetailContent {
+                    margin-right: 48px;
+                    padding-bottom: 15px;
+                    flex: 1;
+                    -ms-flex: 1;
+                    max-width: 800px;
+                    @media (max-width: 1200px) {
+                        -ms-flex: none;
+                    }
+                    .shortDescription {
+                        padding: 9px 0 3px;
+                        font-weight: 200;
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                    .link {
+                        margin-top: 20px;
+                        .linkTitle {
+                            padding: 0;
+                        }
+                        .linkContent {
+                            font-size: 13px;
+                            display: block;
+                        }
+                    }
+                    .capabilities {
+                        .capabilitiesTitle {
+                            margin: 0 !important;
+                        }
+                        .disclaimer {
+                            font-size: 12px;
+                            margin-bottom: 7px;
+                        }
+                        li {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .appDetailMedia {
+                    width: 496px;
+                    align-items: baseline;
+                    .thumbnails {
+                        margin-left: -10px;
+                        line-height: 0;
+                        width: 110%;
+                        .imgContent {
+                            margin: 0 0 10px 10px;
+                            cursor: pointer;
+                            position: relative;
+                            border: 1px solid #E0E0E0;
+                            height: 46px;
+                            float: left;
+                            &:hover,
+                            &:focus {
+                                border-color: #0078D7;
+                            }
+                            >img {
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .selectedMedia {
+                        cursor: pointer;
+                        position: relative;
+                        width: 100%;
+                        min-height: 300px;
+                        margin-bottom: 10px;
+                        img {
+                            width: 100%;
+                            &.content {
+                                border: 1px solid #F2F2F2;
+                                box-shadow: 1px 1px #E0E0E0;
+                                &:hover {
+                                    border-color: #0078D7;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 1200px) {
+                        width: auto;
+                        max-width: 700px;
+                    }
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        opacity: .75;
+                        pointer-events: none;
+                    }
+                }
+            }
+            .overview .appDetailContent,
+            .pricing.simplePlanPricing .pricingListItem {
+                .description {
+                    font-size: 13px;
+                    line-height: 20px;
+                    >ul {
+                        margin: 13px 0 !important;
+                        padding-left: 40px !important;
+                        list-style-type: disc !important;
+                    }
+                    >p {
+                        margin: 13px 0 !important;
+                        >a {
+                            color: #0078D7 !important;
+                        }
+                    }
+                    >h1,
+                    >h2,
+                    >h3,
+                    >h4,
+                    >h5,
+                    >h6,
+                    >header {
+                        padding: 0 0 4px !important;
+                        font-weight: 200 !important;
+                        font-size: 18px !important;
+                        line-height: 24px !important;
+                        b {
+                            font-weight: 200;
+                        }
+                    }
+                }
+            }
+            .pricing.simplePlanPricing .pricingListItem .description {
+                >p {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+        .header {
+            margin-left: 0;
+        }
+    }
+    .embedBreadcrumbButton {
+        &:hover {
+            cursor: pointer;
+            color: #0078D7;
+        }
+        span {
+            &:after {
+                content: $glyph-chevron-left;
+                font-size: 12px;
+                margin-right: 6px;
+            }
+        }
+    }
+}

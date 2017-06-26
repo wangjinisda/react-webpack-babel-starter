@@ -1,0 +1,178 @@
+@mixin text-overflow-style() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} 
+
+@mixin button-style() {
+    border: none;
+    background-color: white;
+    
+    &:hover{
+        background-color: #F2F2F2;
+    }
+}
+
+.spza_signInBlock{
+    float: right;
+
+    .spza_feedback{
+        width: 32px;
+        float: left;    
+        padding: 6px 0 12px 6px;
+        position: relative;
+        
+        &.separationBar{
+            &:after{
+                content: '';
+                background: #a6a6a6;
+                position: absolute;
+                bottom: 10px;
+                top: 10px;
+                right: 0;
+                height: 20px;
+                width: 1px;
+            }
+            .smileFace{
+                margin-top: 4px;
+            }
+        }
+
+        .smileFace{
+            &:hover{
+                cursor: pointer;
+            }
+
+            margin-top: 6px;
+            width: 20px;
+            height: 20px;
+            background-image: url(/images/smile.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: 100%;
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+.spza_signButton {
+    cursor: pointer;
+    float: left;
+    right: calc(4% + 20px);
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    &.spza_signIn {
+        padding-top: 5px; 
+
+        .signInButton {
+            margin: 0;
+            background: transparent;
+            color: black;
+        }
+    }
+
+    &.spza_signedIn {
+        height: 42px;
+        max-width: 300px;   
+    }
+    
+    button {
+        max-width: 300px;
+        @include text-overflow-style();
+        @include button-style();
+    }
+
+    .userTitle {
+        right: -1px;
+        
+        button {
+            @include button-style();
+        }
+
+        img {
+            float: right;
+            width: 32px;
+            height: 32px;
+            margin-top: 2px;
+            margin-right: 2px;
+            border-radius: 100%;
+        }
+
+        span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            float: right;
+            max-width: 100px;
+            margin: 9px 8px 0px 0px;
+            padding: 0 2px 0 10px;
+        }
+
+        &.userTabInactive {
+            padding: 1px 8px 6px 0;
+            height: inherit;
+            border: 1px solid transparent;
+            border-bottom: none;
+        }
+
+        &.userTabActive {
+            padding: 1px 8px 6px 0;
+            height: inherit;
+            border: 1px solid #E6E6E6;
+            border-bottom: none;
+            background: white;
+            z-index: 1000;
+        }
+    }
+
+    .userTab {
+        padding-top: 4px;
+        border: 1px solid #E6E6E6;
+        width: 300px;
+        position: absolute;
+        top: 42px;
+        right: 0;
+        background-color: white;
+        cursor: default;
+
+        .firstTab {
+            min-height: 96px;
+        }
+
+        .userTabPhoto {
+            margin: 16px;
+            width: 64px;
+            height: 64px;
+            float: left;
+            border-radius: 100%;
+        }
+        
+        .userTabInfo {
+            margin-left: 8px;
+            padding: 4px;
+            float: left;
+
+            .userTabName {
+                padding-top: 8px;
+                font-size: 16px;
+            }
+            
+            .userTabEmail {
+                margin-top: 8px;
+                font-size: 14px;
+            }
+        }
+
+        .userTabSignOut, .userReviews {
+            button {
+                display: table;
+                padding: 8px 0px;
+                width: 100%;
+                @include button-style();
+                border-top: 1px solid #E6E6E6;
+            }
+        }
+    }
+}

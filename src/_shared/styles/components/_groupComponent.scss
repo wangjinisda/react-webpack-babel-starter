@@ -1,0 +1,138 @@
+.spza_group{
+    margin-bottom: 20px;
+    position: relative;
+    min-width: 350px;
+
+    .header {
+        margin-left: 20px;
+    }
+
+    .header_wrap{
+        overflow: hidden;
+
+        .spza_headerText{
+            font-size: 24px;
+            font-weight: 200;
+            padding: 11px 0 26px 0px;
+            line-height: 28px;
+            width: calc(100% - 120px);
+            height: 65px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            float: left;
+        }
+
+        .header_link {
+            float:right;
+            height: 65px;
+            color: #0078D7;
+            padding: 11px 0 26px 0px;
+
+            span{
+                &:after{
+                    content: $glyph-forward;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        .explore{
+            border: none;
+            background-color: white;
+            color: #0078D7;
+            position: absolute;
+            top: 33px;
+            right: 0;
+            margin: 12px 0 0 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .ribbonSeeAll{
+            border: none;
+            background-color: white;
+            color: #0078D7;
+            position: absolute;
+            top: 33px;
+            right: 0;
+            margin: 12px 0 0 0;
+
+            &:hover {
+                text-decoration: underline;
+                background-color: white;
+            }
+
+            &:focus {
+                color: white;
+            }
+        }
+    }
+    .segueRibbonSubHeader   {
+            font-size: 15px;
+            font-weight: 200;
+            color: #000;
+            padding: 0 0 20px 0px;
+            display:inline-block;
+        }
+
+    .spza_pagerWrapper{
+        overflow: hidden;
+        position: relative;
+        margin: 0 0 0 0px;
+    }
+
+    .spza_pager{
+        height: 336px;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-flow: row wrap;
+        flex: 1;
+
+        @media (max-width: 1430px) {
+            width: auto;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 539px){
+            height: 100px;
+        }
+    }
+}
+
+.spza_homePage .spza_pager{
+    height: auto;
+    min-width: 660px;
+    max-width: 1320px;
+
+    @media (max-width: 1446px) {
+        max-width: 1100px;
+    }
+
+    @media (max-width: 1228px) {
+        max-width: 880px; /* Reduce to 4 tiles when reach max 90% */
+    }
+
+    @media (max-width: 965px) {
+        max-width: 660px; /* Reduce to 3 tiles when reach max 90% */
+    }
+
+    @media (max-width: 726px) {
+        min-width: 440px;
+        max-width: 440px; /* Reduce to 2 tiles when reach max 90% */
+    }
+
+}

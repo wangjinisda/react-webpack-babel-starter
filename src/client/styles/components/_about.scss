@@ -1,0 +1,125 @@
+.about {
+    z-index: 1000;
+    
+    .section {
+        .content{
+            min-height: 200px;
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 15px;
+
+            .text{
+                width: calc(100% - 120px);
+                float: left;
+                padding: 0 10px;
+
+                .header{
+                    padding-top: 10px;
+                }
+            }
+        }
+
+        &.part1{
+            background-image: url(/images/banner_blurred.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+
+            .content{
+                height: 470px;
+                display: flex;
+                flex-direction: column;
+
+                .text{
+                    margin-bottom: 20px;
+                    width: 46%;
+                    padding: 10px 0;
+                }
+
+                .videoHolder{
+                    width: 567px;
+                    padding-left: 10px;
+
+                    .videoContainer{
+                        iframe{
+                            float: left;
+                            border: none;
+                        }
+                        span {
+                            &:after {
+                                content: $glyph-cancel;
+                                width: 16px;
+                                height: 17px;
+                                border: 1px solid black;
+                            }
+                        }
+                    }
+                    
+                    .videoPlayerButton {
+                        opacity: .6;
+                        width: 200px;
+                        height: 200px;
+                        margin: 50px 170px;
+                        background-image: url(/images/videoOverlay.png);
+                        background-position: center;
+                        background-color: transparent;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        &.part3, &.part5 {
+            margin-top: 20px;
+
+            .column1, .column2{
+                width: 49%;
+                float: left;
+            }
+
+            .imgHolder{
+                margin-top: 10px;
+                float: left;
+                width: 120px;
+                height: 60px;
+            }
+
+            .testDrive{
+                background: transparent;
+                border: 1px solid #0078D7;
+                color: #0078D7;
+            }
+        }
+
+        &.part3{
+            .column1{
+                .searchImg{
+                    height: 95%;
+                }
+            }
+            
+            .column2{
+                .createImg{
+                    width: 79%;
+                    margin: 0 13px;
+                }
+            }
+        }
+
+        &.part5{
+            .column1{
+                .focusImg{
+                    height: 100%;
+                    margin: 0 33px;
+                }
+            }
+
+            .column2{
+                .enterpriseImg{
+                    width: 76%;
+                    margin: 0 14px;
+                }  
+            } 
+        }
+    }
+}

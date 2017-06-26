@@ -1,0 +1,26 @@
+.context-partners-page {
+    background: white;
+    z-index: 1000;
+
+    .three {
+        background-color: #2172b9;
+    }
+
+    .theme-dark-top {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/mac-banner.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%
+    }
+
+    .c-hero {
+        .c-heading {
+            color: white
+        }
+        .c-subheading {
+            color: white
+        }
+        .c-paragraph {
+            color: white
+        }
+    }
+}
