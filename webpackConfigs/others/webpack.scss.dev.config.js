@@ -27,7 +27,8 @@ module.exports = {
         rules: [
             rules.stylesRules.cssExtractTextPlugin,
             rules.stylesRules.scssExtractTextPlugin,
-            rules.imageRules.images_only_file_loader
+            rules.imageRules.images_only_file_loader,
+            rules.fontRules.fonts,
         ]
     },
     devtool: "source-map",
