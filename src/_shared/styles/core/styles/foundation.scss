@@ -8,12 +8,12 @@
 @font-face {
     font-family: "MWF-MDL2";
     @if $ltie8 == true {
-        src: url('../fonts/MWFMDL2.eot');
-        src: url('../fonts/MWFMDL2.eot?#ie8fix') format('embedded-opentype');
+        src: url('fonts/MWFMDL2.eot');
+        src: url('fonts/MWFMDL2.eot?#ie8fix') format('embedded-opentype');
     } @else {
-        src: url('../fonts/MWFMDL2.woff') format('woff'),
-             url('../fonts/MWFMDL2.ttf') format('truetype'),
-             url('../fonts/MWFMDL2.svg') format('svg');
+        src: url('fonts/MWFMDL2.woff') format('woff'),
+             url('fonts/MWFMDL2.ttf') format('truetype'),
+             url('fonts/MWFMDL2.svg') format('svg');
     }
 }
 

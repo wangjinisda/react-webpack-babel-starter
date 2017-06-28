@@ -17,6 +17,8 @@ const store = configureStore(browserHistory, __INITIAL_STATE__)
 const history = historyCreator(store)();
 // const history = syncHistoryWithStore(browserHistory, store)
 
+const css = require('./../jade/styles/App.scss');
+
 render(
   <Provider store={store}>
     <Router history={history} routes={routes} />

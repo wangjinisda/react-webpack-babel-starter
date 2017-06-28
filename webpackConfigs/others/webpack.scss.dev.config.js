@@ -12,6 +12,11 @@ const styles_RTL           = resolve(rootPath, './src/client/styles/index_RTL.js
 module.exports = {
     resolve: {
         extensions: [".webpack.js", ".web.js", ".js", ".jsx", ".tsx", ".ts"],
+        modules: [
+            resolve(process.cwd(), './src/_shared'),
+            resolve(process.cwd(), './src/_shared/styles/core'),
+            resolve(process.cwd(), './node_modules')
+        ],
     },
     entry: {
         'styles_LTR': styles_LTR,
@@ -20,15 +25,20 @@ module.exports = {
     output: {
         filename: "[name].js?[hash]",
         chunkFilename: "[name].js?[hash]",
-        path: resolve(rootPath, '/public'),
-        publicPath: "/public/"
+        path: resolve(rootPath, './public'),
+        publicPath: "./public/"
     },
+    context: rootPath,
+
+    devtool: "eval-source-map",
+
     module: {
         rules: [
-            rules.stylesRules.cssExtractTextPlugin,
-            rules.stylesRules.scssExtractTextPlugin,
-            rules.imageRules.images_only_file_loader,
-            rules.fontRules.fonts,
+            rules.jsRules.reactJs,
+            rules.stylesRules.cssExtractTextPluginPureNaming,
+            rules.stylesRules.scssExtractTextPluginPureNaming,
+            rules.imageRules.images_css,
+            rules.fontRules.fonts_css,
         ]
     },
     devtool: "source-map",

@@ -6,10 +6,10 @@ const rules = {
             'image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false'
         ]
     },
-    images_only_file_loader: {
+    images_css: {
         test: /\.(jpe?g|png|gif)$/i,
         loaders: [
-            'file-loader'
+           'file-loader?name=images_css/[name].[ext]'
         ]
     },
 }
