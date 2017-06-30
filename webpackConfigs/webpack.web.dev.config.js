@@ -53,7 +53,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             // Required
             inject: false,
-            template: require('html-webpack-template-pug'),
+            template: '!!pug-loader!./src/jade/index.pug',
             // Optional
             appMountId: 'root',
             mobile: true,
