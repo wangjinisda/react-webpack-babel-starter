@@ -65,10 +65,18 @@ app.use(webpackHotMiddleware(compiler, {
     log: console.log
 }));
 
-/*
+
+app.use(
+  (req: any, res: any, next: any) => {
+    // introduce a new variable on the request object for the start time of this request
+    req.RequestStart = Date.now();
+    next();
+  });
+
+
 app.use(express.static(webpackConfig.output.path));
 
-
+/*
 app.get('*', (req, res) => {
   res.sendFile(resolve(process.cwd(), '..', 'public', 'index.html'));
 });

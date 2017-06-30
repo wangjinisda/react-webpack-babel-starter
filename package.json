@@ -30,10 +30,10 @@
     "test": "jest --watch --coverage",
     "build:dev": "rimraf public && webpack --config ./webpackConfigs/webpack.web.dev.config",
     "build:prod": "webpack --config ./webpackConfigs/webpack.prod.config && tsc ",
-    "server:dev": "webpack --config ./webpackConfigs/webpack.server.dev.config",
+    "server:dev": "npm run build:scss && webpack --config ./webpackConfigs/webpack.server.dev.config",
     "clean": "rimraf dist && rimraf public",
     "clean:modules": "rimraf node_modules",
-    "build:scss": "npm run clean && webpack --config ./webpackConfigs/others/webpack.scss.dev.config.js"
+    "build:scss": "webpack --config ./webpackConfigs/others/webpack.scss.dev.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

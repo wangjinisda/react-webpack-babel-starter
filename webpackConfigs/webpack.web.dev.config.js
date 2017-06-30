@@ -60,7 +60,7 @@ module.exports = {
             title: 'My App',
             injectExtras: {
                 head: [
-                    "/css/styles-LTR.css"
+                    "css/styles-LTR.css"
                 ]
             }
             // Other options...
