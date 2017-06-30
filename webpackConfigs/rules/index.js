@@ -5,7 +5,8 @@ const stylesRules = require("./stylesRules")
 const imageRules = require("./imageRules")
 const mapRules = require("./mapRules")
 const fileRuls = require("./fileRules")
+const pugRules = require("./pugRules")
 
 
 
-module.exports = {fontRules, jadeRules, jsRules, stylesRules, imageRules, mapRules, fileRuls}
+module.exports = {fontRules, jadeRules, jsRules, stylesRules, imageRules, mapRules, fileRuls, pugRules}
