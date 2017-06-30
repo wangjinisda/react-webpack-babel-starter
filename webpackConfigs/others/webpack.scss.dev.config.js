@@ -5,9 +5,9 @@ const rules                = require('./../rules/index');
 const { resolve }          = require("path");
 
 const rootPath             = resolve(process.cwd(), './');
-const styles_LTR           = resolve(rootPath, './src/client/styles/index_LTR.js');
+const styles_LTR           = resolve(rootPath, './src/client/styles/styles-LTR.scss');
 
-const styles_RTL           = resolve(rootPath, './src/client/styles/index_RTL.js');
+const styles_RTL           = resolve(rootPath, './src/client/styles/styles-RTL.scss');
 
 module.exports = {
     resolve: {
