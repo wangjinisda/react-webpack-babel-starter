@@ -39,7 +39,8 @@ module.exports = {
                 rules.jadeRules.jade,
                 rules.jsRules.reactJs,
                 rules.jsRules.ts,
-                rules.fileRuls.files
+                rules.fileRuls.files,
+                rules.pugRules.pug
             ],
     },
     externals: [
