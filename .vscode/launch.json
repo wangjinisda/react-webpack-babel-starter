@@ -9,11 +9,11 @@
             "type": "node",
             "request": "launch",
             "protocol": "inspector",
-            "program": "${workspaceRoot}/public/server.js",
+            "program": "${workspaceRoot}/public/server",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
-            "preLaunchTask": null,
+            "preLaunchTask": "pack",
             "runtimeExecutable": null,
             "runtimeArgs": [
                 "--nolazy"
