@@ -25,7 +25,7 @@
     "lint": "npm run lint:js && npm run lint:sass",
     "lint:js": "jshint",
     "lint:sass": "stylelint ./src/**/*.scss",
-    "start": "npm run clean && npm run server:dev && npm run begin",
+    "start": "npm run clean && npm run build:dev && npm run begin",
     "begin": "node .\\public\\server.js",
     "test": "jest --watch --coverage",
     "build:dev": "rimraf public && npm run build:scss && npm run server:dev && npm run client:dev",

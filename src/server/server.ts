@@ -7,8 +7,10 @@ import * as express from "express";
 const { resolve } = require("path");
 
 const pug         = require('pug');
+const https       = require('https');
+const fs          = require('fs');
 
-let template = require("./../jade/views/test.pug");
+let template = require("./../jade/views/index.pug");
 let app      = express();
 
 app.use(express.static(resolve(process.cwd(), './public')));
@@ -20,14 +22,21 @@ app.use(
     next();
   });
 
-
-
 app.get('/', function (req, res) {
 
-  res.send(template({name: 'test'}));
+  res.send(template({
+    name: 'test',
+    title: 'jiwag title'
+  }));
 });
 
 
-app.listen(3000, function () {
-  console.log("Listening on port 3000!");
-});
+const options = {
+    key: fs.readFileSync(require('./../resources/certs/key.pem')),
+    cert: fs.readFileSync(require('./../resources/certs/cert.pem'))
+};
+
+https.createServer(options, app)
+    .listen(3000, function () {
+        console.log("Listening on port 3000! \n ->please access it in https way.");
+    })
