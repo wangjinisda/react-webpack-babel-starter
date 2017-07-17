@@ -10,7 +10,7 @@ const pug         = require('pug');
 const https       = require('https');
 const fs          = require('fs');
 
-let template = require("./../jade/views/index.pug");
+let template = require("./../pug/views/index.pug");
 let app      = express();
 
 app.use(express.static(resolve(process.cwd(), './public')));
