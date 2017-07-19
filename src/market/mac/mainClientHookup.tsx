@@ -77,7 +77,7 @@ store.dispatch(loadTileData()).then((result: any) => {
     <Provider store={store}>
       <Router routes={Routes(store.dispatch)} history={appHistory} />
     </Provider>,
-    document.getElementById('react-view')
+    document.getElementById('root')
   );
   return Promise.resolve(result);
 });
