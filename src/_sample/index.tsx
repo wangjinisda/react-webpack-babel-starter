@@ -4,7 +4,7 @@ import * as React from 'react'
 import { render } from 'react-dom'
 
 import { Provider } from 'react-redux'
-import { appHistory, historyCreator } from './../_shared/routerHistory'
+import { appHistory, historyCreator } from './../market/shared/routerHistory'
 
 import { configureStore } from './store'
 
