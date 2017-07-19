@@ -1,0 +1,102 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-azure-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -210px -150px;
+  width: 20px;
+  height: 20px;
+}
+.icon-cortana-intelligence-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -230px -150px;
+  width: 20px;
+  height: 20px;
+}
+.icon-dynamics-365-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -150px -170px;
+  width: 20px;
+  height: 20px;
+}
+.icon-dynamics-ax-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -150px -150px;
+  width: 20px;
+  height: 20px;
+}
+.icon-dynamics-crm-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -170px -150px;
+  width: 20px;
+  height: 20px;
+}
+.icon-dynamics-nav-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -190px -150px;
+  width: 20px;
+  height: 20px;
+}
+.icon-lightbulb {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -150px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-marketSearch {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: 0px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-office-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -250px -150px;
+  width: 20px;
+  height: 20px;
+}
+.icon-office365-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -270px -150px;
+  width: 20px;
+  height: 20px;
+}
+.icon-people {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: 0px -150px;
+  width: 150px;
+  height: 150px;
+}
+.icon-power-bi-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -170px -170px;
+  width: 20px;
+  height: 20px;
+}
+.icon-project-madeira-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -190px -170px;
+  width: 20px;
+  height: 20px;
+}
+.icon-web-apps-20 {
+  background-image: url(/images/appsource-home-sprite.png);
+  background-position: -210px -170px;
+  width: 20px;
+  height: 20px;
+}

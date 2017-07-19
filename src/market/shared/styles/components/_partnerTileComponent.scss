@@ -1,0 +1,35 @@
+@mixin text-overflow-style() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} 
+
+.partnerMedal{
+    width: 100%;
+    padding: 5px 12px;
+    position: absolute;
+    bottom: 10px;
+
+    .goldMedal{
+        display: flex;
+        padding-left: 5px;
+
+        >img{
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            min-height: 20px;
+            margin-right: 5px;
+        }
+
+        >span{
+            vertical-align: middle;
+            text-align: left;
+            font-size: 10px;
+            line-height: 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+}

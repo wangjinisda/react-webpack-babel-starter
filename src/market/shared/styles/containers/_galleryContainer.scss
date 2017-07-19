@@ -1,0 +1,218 @@
+.spza_galleryContainer{
+   width: 100%;
+
+    .spza_content {
+        width: 90%;
+        align-self: center;
+        margin: auto;
+        max-width: $max-content-width;
+        display: flex;
+
+        .paneAndGalleryWrapper {
+            display: flex;
+
+            .spza_tileGroups{
+                position: relative;
+                top: -20px;
+            }
+
+            .curatedGalleryWrapper {
+                position: relative;
+                top: 54px;
+            }
+        }
+
+        .spza_tileGroups{
+            overflow: hidden;
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+/* .c-pagination is deprecated as of v.1.7.0,
+   use .m-pagination
+   TODO: Remove .c-pagination in v.2.0 */
+.pagination,
+.m-pagination,
+.c-pagination {
+    display: block;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+.pagination li,
+.m-pagination li,
+.c-pagination li {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.pagination li > a,
+.pagination li > span,
+.m-pagination li > a,
+.m-pagination li > span,
+.c-pagination li > a,
+.c-pagination li > span {
+    display: inline-block;
+    padding: 5px 11px;
+    outline: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.pagination li > a:focus,
+.pagination li > span:focus,
+.m-pagination li > a:focus,
+.m-pagination li > span:focus,
+.c-pagination li > a:focus,
+.c-pagination li > span:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: 1px dashed #000;
+
+}
+
+.pagination li > a:hover,
+.m-pagination li > a:hover,
+.c-pagination li > a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    outline-color: rgba(0, 0, 0, 0.1);
+}
+
+.pagination li > a:active,
+.m-pagination li > a:active,
+.c-pagination li > a:active {
+    background-color: rgba(0, 0, 0, 0.3);
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.pagination li.active > a,
+.pagination li.active > span, .pagination li.f-active > a,
+.pagination li.f-active > span,
+.m-pagination li.active > a,
+.m-pagination li.active > span,
+.m-pagination li.f-active > a,
+.m-pagination li.f-active > span,
+.c-pagination li.active > a,
+.c-pagination li.active > span,
+.c-pagination li.f-active > a,
+.c-pagination li.f-active > span {
+    outline-color: #0078D7;
+}
+
+.pagination li.f-hide,
+.m-pagination li.f-hide,
+.c-pagination li.f-hide {
+    display: none;
+}
+
+.pagination li:first-child .c-glyph:before,
+.m-pagination li:first-child .c-glyph:before,
+.c-pagination li:first-child .c-glyph:before {
+    content: "";
+    vertical-align: -2px;
+    margin-right: 8px;
+}
+
+.pagination li:last-child,
+.m-pagination li:last-child,
+.c-pagination li:last-child {
+    margin-right: 0;
+}
+
+.pagination li:last-child .c-glyph:after,
+.m-pagination li:last-child .c-glyph:after,
+.c-pagination li:last-child .c-glyph:after {
+    content: "";
+    vertical-align: -2px;
+    margin-left: 8px;
+}
+
+@media only screen and (max-width: 539px) {
+    .pagination li:first-child a, .pagination li:last-child a,
+    .m-pagination li:first-child a,
+    .m-pagination li:last-child a,
+    .c-pagination li:first-child a,
+    .c-pagination li:last-child a {
+        position: relative;
+    }
+
+    .pagination li:first-child .c-glyph:before,
+    .pagination li:first-child .c-glyph:after,
+    .pagination li:last-child .c-glyph:before,
+    .pagination li:last-child .c-glyph:after,
+    .m-pagination li:first-child .c-glyph:before,
+    .m-pagination li:first-child .c-glyph:after,
+    .m-pagination li:last-child .c-glyph:before,
+    .m-pagination li:last-child .c-glyph:after,
+    .c-pagination li:first-child .c-glyph:before,
+    .c-pagination li:first-child .c-glyph:after,
+    .c-pagination li:last-child .c-glyph:before,
+    .c-pagination li:last-child .c-glyph:after {
+        position: absolute;
+        top: 8px;
+        left: 9999px;
+    }
+}
+
+.spza_controls{
+    margin: 0 45px 7px 45px;
+    padding-bottom: 5px;
+    flex: none;
+    text-align: right;
+    font: 12px "Segoe UI";
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    &.overview_header_link + .spza_group{
+        .header_link {
+            margin: 13px 0;
+            padding: 30px 0px 26px;
+
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.spza_filteredTileContainer{
+    padding: 0 0 50px 0;
+
+    >.spza_tileWrapper {
+        display: inline-block;
+    }
+}
+
+.headerSection{
+    span {
+        &:after{
+            content: $glyph-chevron-down;
+            margin-left: 6px;
+            font-size: 12px;
+        }
+    }
+
+    .links{
+        > a {
+            span{
+                flex: none;
+                font-size: 10px;
+                padding-left: 5px;
+
+                &:after{
+                    content: $glyph-go;
+
+                }
+            }
+        }
+    }
+}

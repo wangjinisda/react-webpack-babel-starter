@@ -1,0 +1,28 @@
+// specific for Azure Header
+.azure-header {
+    width: 100%;
+    position: static;
+
+    // fix to narrow browser
+    @media (max-width: 960px) {
+        overflow: hidden;
+    }
+}
+
+.azure-header .menu {
+    margin-left: 5px;
+    z-index: 2000;
+}
+
+.azure-header .menu-tools {
+    visibility: hidden;
+}
+
+.azure-header .row.column {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.azure-header .skip-nav {
+    position: absolute;
+}

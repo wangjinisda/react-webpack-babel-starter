@@ -1,0 +1,380 @@
+$height : 30px;
+
+.spza-c-search {
+    // component skeleton, extended & decorated by themes
+    &.react-selectize {
+        color: blue;
+    }
+
+    &.react-selectize.root-node {
+        float: right;
+        position: relative;
+        min-width: 92px;
+        max-width: 296px;
+        width: 300px;
+
+        &.disabled {
+            pointer-events: none;
+        }
+
+        .react-selectize-control {
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            
+            // this controls the height of the select 
+            padding: 2px;
+
+            .react-selectize-placeholder {           
+                display: block;
+                line-height: height;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+                white-space: nowrap;
+                position: absolute;
+                max-width: calc(100% - 56px);      
+            }
+
+            .react-selectize-search-field-and-selected-values {
+                display: flex;
+                min-height: height;
+                flex-grow: 1;
+                flex-wrap: wrap;      
+                vertical-align: middle;
+
+                .resizable-input {
+                    background: none;
+                    border: none;
+                    outline: none; 
+                    font-size: 1em;
+                    margin: 2px;
+                    padding: 4px 0px;               
+                    vertical-align: middle;
+                    width: 0px;
+                }
+
+                .value-wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            // .react-selectize-reset-button-container,
+            // .react-selectize-toggle-button-container {
+            //     flex-grow: 0;
+            //     flex-shrink: 0;
+            //     cursor: pointer;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     height: height;
+            // }
+
+            // .react-selectize-reset-button-container {
+            //     width: 16px;
+            // }
+            
+            // .react-selectize-toggle-button-container {
+            //     width: 32px;
+            // }
+
+            // .react-selectize-reset-button-container:hover 
+            // .react-selectize-reset-button path {
+            //     stroke: #c0392b;
+            // }
+            
+            // .react-selectize-reset-button path {
+            //     transition: stroke 1.5s 0s ease;
+            //     stroke: #999;
+            //     stroke-linecap: square;
+            //     stroke-linejoin: mitter;
+            // }
+
+            // .react-selectize-toggle-button path {
+            //     fill: #999; 
+            // }
+            
+            button {
+                float: $left;
+                height: 100%;
+                outline: 0;
+                background-color: $color-background;
+                position: absolute;
+                top: 0;
+                #{$right}: 0;
+                width: 34px;
+                height: 34px;
+                margin: 2px 1px 1px;
+                padding: 9px;
+                transition: color 0.1s, background-color 0.1s;
+                border: 0;
+
+                &:hover {
+                    color: $color-accent;
+                }
+
+                &:active,
+                &:focus {
+                    color: $color-background;
+                    background: $color-accent;
+                }
+
+                &:before {
+                    content: $glyph-search;
+                    text-indent: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    // wraps the dropdown-menu div, exists only when props.transition-enter or props.transition-leave or both are true
+    // present inside document.body if props.tether is true, otherwise its present inside the root-node div (above)
+    // &.react-selectize.dropdown-menu-wrapper {
+    //     position: absolute;
+
+    //     &.tethered {
+    //         min-width: 300px;
+    //     }
+
+    //     &:not(.tethered) {
+    //         width: 80%; 
+    //     }
+    // }
+
+    // // dropdown-menu present in document.body when props.tether is true
+    // &.react-selectize.dropdown-menu {
+    //     box-sizing: border-box;
+    //     overflow: auto;
+    //     position: absolute;
+    //     max-height: 200px;
+    //     z-index: 10;
+
+    //     &.tethered {
+    //         min-width: 300px;
+    //     }
+
+    //     &:not(.tethered) {
+    //         width: 100%;
+    //     }
+
+    //     .groups.as-columns {
+    //         display: flex;
+            
+    //         > div {                     
+    //             flex: 1;
+    //         }
+    //     }
+
+    //     .option-wrapper {
+    //         cursor: pointer;
+    //         outline: none;
+    //     }
+    // }
+
+    // MULTI SELECT
+    &.multi-select.react-selectize.root-node {
+        .simple-value {
+            display: inline-block;
+            margin: 2px;
+            vertical-align: middle;
+        
+            span {
+                display: inline-block;
+                padding: 2px 5px 4px;
+                vertical-align: center;
+            }
+        }
+    }
+    // SIMPLE SELECT
+    &.simple-select.react-selectize.root-node {
+        .simple-value {
+            margin: 2px;
+
+            span {
+                display: inline-block;
+                vertical-align: center;
+            } 
+        }
+    }
+
+
+
+    &.react-selectize.default {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+
+    &.react-selectize.default.root-node {
+        .react-selectize-control {
+            box-sizing: border-box;
+            background-color: white;
+            border: 1px solid;
+            border-color: $color-foreground-60;
+            padding: 7px 10px;
+            height: 38px;
+            padding-#{$right}: 38px;
+            //border-radius: 4px;
+            //font-size: 1em;
+
+            &:hover {
+                border-color: $color-foreground-80;
+            }
+
+            &:active,
+            &:focus {
+                border-color: $color-accent;
+            }
+
+            &::-ms-clear {
+                display: none;
+            }
+            
+            .react-selectize-placeholder {
+                color: #aaa;
+                text-indent: 8px;
+            }
+            
+            // .react-selectize-search-field-and-selected-values{
+            //     padding-left: 8px;
+            // }
+        }
+        
+        &.open {
+            &.flipped {
+                .react-selectize-control {
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
+            }
+
+            &:not(.flipped) {
+                .react-selectize-control {
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
+            }
+        }
+    }
+    // wraps the dropdown-menu div, exists only when props.transition-enter or props.transition-leave or both are true
+    // present inside document.body if props.tether is true, otherwise its present inside the root-node div (above)
+    // &.react-selectize.dropdown-menu-wrapper.default{
+    //     overflow: hidden;
+
+    //     .dropdown-menu {
+            
+    //         &.custom-enter-active, 
+    //         &.custom-leave-active {
+    //             transition: transform 0.2s 0s ease;
+    //         }
+    //         &.flipped {
+    //             &.custom-enter {
+    //                 transform: translateY(100%);
+    //             }
+                
+    //             &.custom-enter-active {
+    //                 transform: translateY(0%);
+    //             }
+                
+    //             &.custom-leave {
+    //                 transform: translateY(0%);
+    //             }
+
+    //             &.custom-leave-active {
+    //                 transform: translateY(100%);
+    //             }
+    //         }
+            
+    //         &:not(.flipped) {
+    //             &.custom-enter {
+    //                 transform: translateY(-100%);
+    //             }
+                
+    //             &.custom-enter-active {
+    //                 transform: translateY(0%);
+    //             }
+                
+    //             &.custom-leave {
+    //                 transform: translateY(0%);
+    //             }
+
+    //             &.custom-leave-active {
+    //                 transform: translateY(-100%);
+    //             }
+    //         }
+    //     }
+    // }
+    // // dropdown-menu present in document.body when props.tether is true
+    // &.react-selectize.dropdown-menu.default {
+    //     background: white;
+    //     border: 1px solid #ccc;
+    //     margin-top: -1px;
+
+    //     &.flipped {
+    //         border-top-left-radius: 4px;
+    //         border-top-right-radius: 4px;
+    //     }
+        
+    //     &:not(.flipped) {
+    //         border-color: #b3b3b3 #cccccc #d9d9d9;
+    //         border-bottom-left-radius: 4px;
+    //         border-bottom-right-radius: 4px;
+    //     }
+
+    //     .no-results-found {
+    //         color: #aaa !important;
+    //         font-style: oblique;
+    //         padding: 8px 10px;
+    //     }
+        
+    //     .simple-group-title {
+    //         background-color: #fafafa;
+    //         padding: 8px 8px;
+    //     }
+        
+    //     .option-wrapper {
+    //         &.highlight {
+    //             background: #f2f9fc;
+    //             color: #333;
+    //         }
+
+    //         .simple-option {
+    //             color: #ff00ff;
+    //             cursor: pointer;
+    //             padding: 8px 40px;
+
+    //             &.not-selectable {
+    //                 background-color: #f8f8f8;
+    //                 color: #999;
+    //                 cursor: default;
+    //                 font-style: oblique;
+    //                 text-shadow: 0px 1px 0px white;
+    //             }
+    //         }
+    //     }          
+    // }
+
+    // // MULTI SELECT
+    // &.multi-select.react-selectize.default.root-node .simple-value {
+    //     background: #f2f9fc;
+    //     border: 1px solid #c9e6f2;
+    //     border-radius: 2px;
+    //     color: #0088cc;
+    // }
+
+    // // SIMPLE SELECT
+    // &.simple-select.react-selectize.default.root-node {
+    //     &.open .react-selectize-control {
+    //         background-color: white;
+    //     }
+        
+    //     &:not(.open) .react-selectize-control {
+    //         background-color: #f9f9f9;
+    //         background-image: linear-gradient(to bottom, #fefefe, #f2f2f2);
+    //     }
+    // }
+}

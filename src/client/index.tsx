@@ -1,1 +1,1 @@
-require('./../_sample/index');
+import './../market/mac/mainClientHookup'

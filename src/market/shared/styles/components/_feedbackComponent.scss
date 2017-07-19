@@ -1,0 +1,236 @@
+@mixin text-overflow-style() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} 
+
+.feedbackDialog{
+    border: 1px solid #E6E6E6;
+    width: 340px;
+    height: 507px;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    background-color: white;
+    cursor: default;
+
+    overflow-y: hidden;
+    max-height: 507px; /* approximate max height */
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+    .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 999;
+    }
+    .feedbackDialogContent{
+        position: relative;
+        top: 10px;
+        z-index: 1000;
+
+        .contentHeader, .subHeader1{
+            display: inline-block;
+        }
+
+        .contentHeader {
+            font-size: 24px;
+            font-weight: lighter;
+            margin: 0 0 0 20px;
+            height: 32px;
+            @include text-overflow-style;
+        }
+
+        .subHeader1{
+            margin: 5px 0 7px 20px;
+
+            &.line1{
+                margin-bottom: 15px;
+            }
+        }
+
+        .faces{
+            height: 45px;
+            margin-left: 20px;
+
+            .happyFace{
+                float: left;
+                margin-right: 20px;
+                display: flex;
+                flex-direction: column;
+
+                .happyImg{
+                    margin: auto;
+                    margin-bottom: 7px;
+                    width: 32px;
+                    height: 32px;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    background-size: 100%;
+                    background-color: transparent;
+                    border: none;
+                }
+
+                .happyChosen{
+                    background-image: url(/images/smile.png);
+                }
+
+                .happyNotChosen{
+                    background-image: url(/images/smileUnselected.png);
+                }
+            }
+
+            .sadFace{
+                float: left;
+                display: flex;
+                flex-direction: column;
+
+                .sadImg{
+                    margin: auto;
+                    margin-bottom: 7px;
+                    width: 33px;
+                    height: 33px;
+                    
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    background-size: 100%;
+                    background-color: transparent;
+                    border: none;
+                }
+
+                .unhappyChosen{
+                    background-image: url(/images/sad.png);
+                }
+
+                .unhappyNotChosen{
+                    background-image: url(/images/sadUnselected.png);
+                }
+            }
+        }
+
+        .checkboxes .checkboxContainer, .feedbackPrivacy{
+            label {
+                margin-top: 5px;
+
+                input{
+                    width: 13px;
+                    height: 13px;
+                    bottom: 3px;
+                }
+
+                span {
+                    padding-left: 20px;
+                    font-size: 14px;
+                    line-height: 14px;
+
+                    &:before{
+                        height: 13px;
+                        width: 13px;
+                    }
+
+                    &:after{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .checkboxes{
+            margin-top: 10px;
+
+            .checkboxContainer{
+                border: none;
+                margin: 0 0 0 20px;
+                padding: 0;
+
+                .checkboxesHeader{
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .feedbackTextArea{
+            margin-bottom: 20px;
+
+            textarea{
+                height: 90px;
+                resize: none;
+                width: 90%;
+                margin: 10px 0 0 20px;
+                font-size: 12px;
+                line-height: 12px;
+                padding: 2px 0 0 2px;
+            }
+        }
+
+        .feedbackPrivacy{
+            margin-left: 20px;
+
+            a {
+                margin-left: 2px;
+            }
+
+            label span {
+                line-height: 16px;
+
+                &:before{
+                    top: 2px;
+                }
+
+                &:after{
+                    padding-top: 1px;
+                }
+            }
+        }
+
+        .feedbackPrivacy + input.c-text-field[type="text"]{
+            font-size: 12px;
+        }     
+
+        .feedbackEmailInput{
+            margin: 5px 0 0 20px;
+            width: 90%;
+            height: 20px;
+            padding: 0 0 3px 3px;   
+        }
+
+        .invalidEmailInput{
+            border-color: red;
+            color: red;
+        }
+        
+        .feedbackButton{
+            height: 76px;
+
+            .invalidEmailText{
+                margin-left: 20px;
+                font-size: 11px;
+                color: red;
+            }
+
+            .requestbutton{
+                float: right;
+                margin: 20px 15px 20px 0;
+
+                &:focus{
+                    outline: none;
+                    background: #006cc2;
+                }
+
+                &:disabled{
+                    color: white;
+                    background-color: #e3e3e3;
+                }
+            }
+        }
+    }
+}
+
+.dialogClosed{
+    max-height: 0;
+    border: none;
+}

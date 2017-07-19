@@ -1,0 +1,92 @@
+.shell-header-wrapper,
+.shell-footer-wrapper, 
+.shell-category-nav {
+     max-width: $max-content-width !important;
+ }
+
+// "How it works" button custom styles
+// Beat the external uhf css specificity by adding an a element selector (a.category-cta-button)
+.shell-category-header-cta-wrapper a.category-cta-button {
+    
+}
+
+.shell-category-header.cat-theme-blue .shell-category-header-cta-wrapper a.category-cta-button {
+    color: white;
+}
+
+.c-universal-header {
+    margin-top: 0;
+
+    .theme-light{
+        >div {
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        #uhf-g-nav {
+            .c-select-menu{
+                button{
+                    height: 49px;
+
+                    &:focus, &:hover{
+                        &:before{
+                            width: 0;
+                        }
+                    }
+
+                    &:hover{
+                        background-color: #f2f2f2;
+                    }
+                }
+
+                .c-menu{
+                    margin-left: -8px !important;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .c-logo {
+                left: 60px !important;
+                top: 3px !important;
+            }
+        }
+    }
+
+    .theme-dark{
+        >div {
+            max-width: 1317px;
+            margin: auto;
+        }
+        .c-call-to-action {
+            color: white;
+            border: 1px solid white;
+            padding: set-direction-based-value(11px 28px 8px 12px, 11px 12px 8px 28px);
+            background-color: $color-brand-blue;
+
+            &:hover, &:focus {
+                background-color: #0060ac !important;
+            }
+
+            &:after {
+                position: absolute;
+                display: inline-block;
+                margin-#{$left}: 4px;
+                margin-top: 1px;
+                vertical-align: top;
+                @include apply-glyph($glyph-play);
+            }
+        }
+    }
+
+    >div+div .c-logo span {
+        font-size: 20px;
+        line-height: 30px;
+        display: inline;
+        font-weight: normal;
+    }
+}
+
+#footerArea{
+    margin-top: -48px;
+}

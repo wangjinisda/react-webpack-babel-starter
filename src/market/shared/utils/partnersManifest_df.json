@@ -1,0 +1,125 @@
+{
+    "handoff": {
+        "1": {
+            "Product": "dynamics-365-for-operations",
+            "HandOffURL": "https://lcs.tie.dynamics.com/LogOn/ADLogon?fRdr=true&redirectUrl=https://lcslocaldev.dynamics.com//SolutionsTrial/Index?solutionId={0}?responseUrl={1}&requestId={2}"
+        },
+        "2": {
+            "Product": "dynamics-365",
+            "HandOffURL": "https://port.crm.crmlivetie.com/g/marketplace/index.aspx/?applicationId={0}&responseUrl={1}&requestId={2}"
+        },
+        "4": {
+            "Product": "dynamics-nav",
+            "HandOffURL": "http://madeiramis.cloudapp.net/SampleService/Acquire/{0}?responseUrl={1}&requestId={2}"
+        },
+        "8": {
+            "Product": "dynamics-365-for-financials",
+            "HandOffURL": "https://portal.projectmadeira-test.com/?applicationId={0}&responseUrl={1}&requestId={2}"
+        },
+        "16384": {
+            "Product": "office",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        },
+        "32768": {
+            "Product": "excel",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        },
+        "65536": {
+            "Product": "onenote",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        },
+        "131072": {
+            "Product": "outlook",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        },
+        "262144": {
+            "Product": "powerpoint",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        },
+        "524288": {
+            "Product": "project",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        },
+        "1048576": {
+            "Product": "sharepoint",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        },
+        "2097152": {
+            "Product": "teams",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        },
+        "4194304": {
+            "Product": "word",
+            "HandOffURL": "https://store.office.com/en-us/addininstaller.aspx?assetid={0}&ui={1}&rs={2}&sourcecorrid={3}&authtype={4}&gates=marketplace.addininstaller&responseUrl={5}&src=AppSource"
+        }
+    },
+    "fieldHub": {
+        "embedEndpoint": "https://msit.powerbi.com/reportEmbed?reportId={0}&pageName={1}&filterPaneEnabled={2}",
+        "queryParams": {
+            "Field_Orders": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection8"
+            },
+            "Field_Summary": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection9"
+            },
+            "Field_Leads_Sent": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection10"
+            },
+            "Field_Contacts": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection11"
+            },
+            "Field_District_Sales": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection1"
+            },
+            "Field_Industry_Sales": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection12"
+            },
+            "Field_Region_Sales": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection15"
+            },
+            "Field_Segment_Sales": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection14"
+            },
+            "Field_Usage_Hours": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection16"
+            },
+            "Field_Usage_Timeline": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection13"
+            },
+            "Field_Top10_Products": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection14"
+            },
+            "Field_District": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection1"
+            },
+            "Field_Industry": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection12"
+            },
+            "Field_Region": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection15"
+            },
+            "Field_Segment": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection14"
+            },
+            "Default": {
+                "reportId": "381260bf-5bbd-49ca-bfc6-f1e8f6bc0c3e",
+                "sectionId": "ReportSection1"
+            }
+        }
+    }
+}

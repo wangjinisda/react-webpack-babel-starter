@@ -1,0 +1,133 @@
+.macHeaderContainer{
+    height: 64px;
+}
+.macHeader {
+    background: #2172b9;
+    width: 100%;
+    min-height: 62px;
+
+    .macHeaderContent {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .headerItem {
+        font-family: 'Segoe UI';
+        font-size: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 62px;
+        color: white;
+        display: inline-block;
+        border: none;
+        height: inherit;
+        background: #2172b9;
+        text-align: center;
+    }
+
+
+    .headerItemClickable {
+        font-size: 15px;
+        min-width: 80px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 800px) {
+            line-height: 24px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+
+    .headerItemSelected {
+        font-weight: 600;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .macSearchAndSignIn {
+        position: relative;
+        float: right;
+        margin-top: 14px;
+        padding-right: 8px;
+        z-index: 1200;
+
+        .spza_signInBlock .spza_feedback{ 
+            padding: 2px 3px 11px 3px;
+
+            &.separationBar{
+                &:after{
+                    top: 4px;
+                    left: 37px;
+                    height: 25px;
+                }
+            }
+            .smileFace{
+                background-image: url(/images/macSmiley.png);
+                width: 28px;
+                height: 28px;
+                background-color: transparent;
+                border: none;
+                margin: 0;
+            }
+        }
+
+        .spza_signButton.spza_signIn .macSignInButton {
+            color: white;
+        }
+
+        .spza_signButton.spza_signedIn .userTitle span{
+            @media (max-width: 1180px) {
+                max-width: 150px;
+            }
+        }
+       
+        .spza-c-search.react-selectize.root-node {
+            margin-right: 10px;
+            max-width: 320px;
+
+            .react-selectize-control .react-selectize-placeholder {
+                font-style: italic;
+                width: 58%;
+            }
+
+            @media(max-width: 1280px) {
+                max-width: 370px;
+            }
+
+            @media(max-width: 1180px) {
+                max-width: 290px;
+            }
+        }
+
+        .react-selectize.dropdown-menu-wrapper.default {
+            @media(max-width: 1180px){
+               min-width: 420px;
+            }
+        }
+    }
+}
+
+.spza_signButton.spza_signedIn {
+    margin-top: -3px;
+}
+
+.spza_signButton .userTitle span {
+    color: white;
+}
+
+.spza_signButton .userTab {
+    right: 8px;
+}
+
+.spza_signButton .userTitle.userTabActive {
+    background: #2172b9;
+}
+
+.spza_dialog {
+    z-index: 3000;
+}

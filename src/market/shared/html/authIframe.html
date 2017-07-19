@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function getQueryParamValue(paramName) {
+            var queryParams = window.location.search.substring(1); // take only the right side of '?'
+            var keyValues = queryParams.split('&');
+            for (var i = 0; i < keyValues.length; i++) {
+                var tuple = keyValues[i].split('=');
+                if (tuple[0] === paramName)
+                    return tuple[1];
+            }
+
+            return '';
+        }
+
+        function signInUser() {
+            let email = '';
+            let correlationId = getQueryParamValue('correlationId');
+            let fromParam = getQueryParamValue('from');
+            let hostName = 'https://' + window.location.hostname;
+            // fromParam is already encoded. fromParam can be one of these 3 : 
+            // 1) /autoSignIn/portal/dummyComponent.html
+            // 2) /autoSignIn/embed/dummyComponent.html
+            // 3) /autoSignIn/mac/dummyComponent.html
+            let from = encodeURIComponent(hostName) + fromParam;
+            // The above HTML page in the from param doesn't exist. We can add a blank dummy page and render that empty page
+            // But instead we are not adding this page which will result in a 404 in the sub Iframe. Since the sub iframe is hidden, it doesn't matter.
+            // In fact we can say "from = 'https://dummyComponent'"
+            // The main reason of not adding this is Perf. We don't want one more file to be added into the bundle and read that file.
+            window.location.href = hostName + '/signin?hint=' + email + '&from=' + from + '&x-ms-correlationid=' + correlationId;
+        }
+        window.onload = signInUser;
+    </script>
+</head>
+</html>

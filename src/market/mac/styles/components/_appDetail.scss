@@ -1,0 +1,38 @@
+.spza_detailContainer {
+    padding-left: 15px;
+    width: 100%;
+    .tabContainer {
+        .defaultTab {
+            &>label {
+                color: #0078D7;
+                &:hover {
+                    color: #0078D7;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .tabSelected {
+            &>label {
+                color: #000;
+                border: none;
+                border-bottom: 3px solid #333;
+                &:hover {
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+        }
+        .separator {
+            border: none;
+        }
+    }
+
+    .detailContent .metadata a.testDrive .requestButton {
+        color: #fff;
+        background-color: #0078D7;
+    }
+}
+
+.spza_partnerDetailContainer .detailContent .metadata .metaDetails .cell a {
+    white-space: normal;
+}

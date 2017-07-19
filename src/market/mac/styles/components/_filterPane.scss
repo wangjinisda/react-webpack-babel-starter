@@ -1,0 +1,107 @@
+.spza_filterContainer {
+    display: inline-table;
+}
+
+.spza_filterGroup{
+    .mac_filterTitle{
+        padding: 0px;
+        margin-bottom: 10px;
+        color: black;
+    }
+
+    .spza_filterItems{
+        .filterPaneItemRoot {
+            >.filterItem {
+                .spza_filterItem {
+                    &.spza_activeFilter {
+                        font-weight: 600;
+                        cursor: auto;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            >div {
+                >.filterItem {
+                    .spza_filterItem {
+                        font-size:12px;
+                    }
+                }
+            }
+        }
+
+        .filterPaneItemRootWithMargin {
+            margin-bottom: 15px;
+        }
+    }
+
+    .filterItem {
+        .spza_filterItem {
+            font-size: 13px;
+            font-weight: 400;
+            font-family: Segoe UI;
+            color: black;
+            line-height: 24px;
+            cursor: pointer;
+            max-width: 170px;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .spza_filterItemNonClickable {
+            font-size: 16px;
+            font-weight: 200;
+            font-family: Segoe UI;
+            color: black;
+            line-height: 24px;
+        }
+    }
+}
+
+.spza_galleryContainer{
+    .spza_content {    
+        width: 100%;    
+        .gallery {
+            position: relative;
+            top: 3px;
+            margin-bottom: 54px;
+        }
+
+        .paneAndGalleryWrapper {
+            width: 100%;
+            margin: auto;
+            margin-left: 15px;
+
+            .curatedGalleryWrapper {
+                position: relative;
+                top: 54px;
+            }
+        
+            .spza_tileGroups{
+                .spza_group{
+                    margin-bottom: 0;
+
+                    .header_wrap {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.spza_filteredTileContainer{
+    padding: 0;
+}
+
+.galleryHeader_tileFilters .tileFilter {
+    background: #2172b9;
+}
+
+.galleryHeader_tileFilters .filterCloseIcon {
+    background: #2172b9;
+}

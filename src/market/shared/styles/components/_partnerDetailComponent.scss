@@ -1,0 +1,332 @@
+@mixin text-overflow-style() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.spza_partnerDetailContainer{
+    .iconHost{
+        border: 1px solid #D3D3D3;
+        .appLargeIcon {
+            max-width: 162px !important;
+            max-height: 162px !important;
+        }
+    }
+
+    .detailContent .metadata .metaDetails{
+        margin-top: 15px;
+
+        .cell{
+            margin-bottom: 15px;
+            
+            a {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }            
+
+            .leftSideItem{
+                @include text-overflow-style();
+            }
+
+            .moreData{
+                color: #0078D7;
+                font-size: 12px;
+                line-height: 18px;
+
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .filterItem{
+            &.d365FilterGroupHeader {
+                display: none;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .detailContent .content{
+        .overview .appDetailContent{
+            .link {
+                padding-top: 7px;
+
+                .linkTitle{
+                    margin-bottom: 3px;
+                }
+            }
+
+            .partnerDescription{
+                max-height: 294px;
+                overflow: hidden;
+                transition: all .5s;
+            }
+
+            .showLessText{
+                max-height: none;
+                transition: all .5s;
+            }
+
+            .readMoreDescription{
+                color: #0078D7;
+                font-size: 13px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .hideButton {
+                display: none;
+            }
+        }
+        .partnerDetailHeader{
+            margin-bottom: 15px;
+
+            .tagline{
+                padding: 0;
+                font-size: 13px;
+                color: rgb(5,7,8);
+                line-height: 20px;
+            }
+        }
+    }
+
+    .tabContainer{
+        min-height: 52px;
+        clear: both;
+
+        .separator{
+            border-bottom: 1px solid #D3D3D3;
+            position: relative;
+            top: -9px;
+        }
+
+        .defaultTab{
+            float: left;
+
+            >label{
+                display: inline-block;
+                margin: 0 35px -1px 0;
+                padding: 15px 0 15px 0;
+                text-align: center;
+                color: #bbb;
+                border: 1px solid transparent;
+                cursor: pointer;
+                font-size: 18px;
+                line-height: 20px;
+
+                &:hover{
+                    color: #888;
+                }
+            }
+
+            [type='radio']{
+                display: none;
+            }
+        }
+
+        .tabSelected{
+            > label {
+                color: #555;
+                border-bottom: 1px solid #333;
+                transition: border 0.4s;
+                &:hover{
+                    color: #555;
+                }
+            }
+        }
+
+        > .tabContent {
+            display: block;
+            position: relative;
+            top: 10px;
+            clear: both;
+
+            .tabHeader {
+            }
+        }
+
+        > .tabtileContent {
+            .tabHeader {
+            }
+
+            .spza_filteredTileContainer {
+                padding: 0 0 0 0;
+            }
+
+            .spza_tileWrapper {
+                margin:0 20px 32px 0;
+            }
+        }       
+    }
+
+    .overviewContent{
+        h1, h2, h3, h4, h5, h6, p{
+            margin: 13px 0 !important;
+        }
+
+        .spza_tileWrapper{
+            h1, h2, h3, h4, h5, h6, p{
+                margin: 0 0 0 0 !important;
+            }
+            display: inline-block;
+        }
+
+        .shortDescription{
+            margin-bottom: 13px;
+        }
+
+        ol{
+            margin: 13px 0;
+            padding-left: 40px;
+            list-style: decimal;
+        }
+    }
+
+    .locationsContent{
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 0.25rem;
+            text-align: left;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #D3D3D3;
+            line-height: 24px;
+            font-size: 13px;
+        }
+    }
+
+    .competenciesContent{
+        display: flex;
+
+        header{
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .leftSide, .rightSide{
+            display: flex;
+            flex-direction: column;
+
+            .displayItem{
+                font-size: 13px;
+                line-height: 20px;
+                max-width: 350px;
+                min-width: 300px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .leftSide{
+            margin-right: 50px;
+
+            .competency{
+                margin-bottom: 28px;
+
+                .gold{
+                    margin: 10px 0 28px 0;
+
+                    .goldMedalIcon{
+                        margin-right: 28px;
+                    }
+                }
+
+                .gold, .silver{
+                    display: flex;
+                }
+
+                .gold .goldMedalIcon, .silver .silverMedalIcon{
+                    height: 20px;
+                    margin-top: -4px;
+
+                    >img{
+                        margin-right:10px;
+                    }
+
+                    >span{
+                        vertical-align: middle;
+                        font-size: 13px;
+                    }
+                }
+
+                .silver .silverMedalIcon{
+                    margin-right: 25px;
+                }
+            }
+
+            .learnCompetency{
+                font-size: 13px;
+                margin-bottom: 28px;
+            }
+
+            .industryCerts {
+                header {
+                    margin-bottom: 5px;
+                }
+                div {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .rightSide{
+            .industry, .category, .customerSize{
+                margin-bottom: 28px;
+            }
+
+            .filterItem{
+                display: block;
+                font-size: 13px;
+                line-height: 20px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .industry{
+
+            }
+
+            .category{
+
+
+            }
+
+            .customerSize{
+
+            }
+
+            .language {
+                header {
+                    margin-bottom: 5px;
+                }
+                div {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .crossListingsComponent{
+        .tabHeader {
+        }
+
+        .spza_tileWrapper {
+            margin:0 20px 32px 0;
+        }
+    }
+}

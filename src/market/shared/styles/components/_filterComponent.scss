@@ -1,0 +1,113 @@
+.spza_filterContainer{
+    padding-right: 5px;
+
+    @media(max-width: 539px){
+        display: none;
+    }
+}
+
+.spza_filterGroup{
+    border: none;
+    margin: 20px 0 30px 0;
+    min-width: 165px;
+
+    &.product {
+        > span {
+            font-size: 12px;
+            line-height: 24px;
+            color: #666;
+            cursor: default;
+        }
+        .spza_filterItems {
+            margin-left: 10px;
+        }
+        .spza_filterItemsNoIndent {
+            margin-left: 0px;
+        }
+    }
+
+    .spza_filterTitle{
+        font-size: 18px;
+        font-weight: 200;
+        margin: 10px 0 5px 0;
+        line-height: 28px;
+    }
+
+    .spza_filterItems{
+        display: block;
+
+        .filterPaneItemRoot {
+            >.filterItem {
+                .spza_filterItem {
+                    &.spza_activeFilter {
+                        font-weight: 700;
+                    }
+                }
+
+            }
+            >div {
+                >.filterItem {
+                    >label {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .filterItem {
+        .spza_filterItem {
+            display: block;
+            font-size: 12px;
+            line-height: 24px;
+            font-family: Segoe UI;
+            color: #666;
+            cursor: pointer;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-top: 0px;
+            margin-right: 0px;
+
+            input[type=checkbox] + span {
+                padding-left: 20px;
+                &:before {
+                    top: 6px;
+                    height: 12px;
+                    width: 12px;
+                    line-height: 12px;
+                    box-shadow: inset 0 0 0 1px #999CA0;
+                    outline: none;
+                }
+            }
+
+            input[type=checkbox]:focus + span {
+                &:before {
+                    outline: 1px dotted #0078D7;
+                }
+            }
+
+            input[type=checkbox]:hover + span {
+                &:before {
+                    box-shadow: inset 0 0 0 1px #000;
+                }
+                &:after {
+                    font-size: 12px;
+                    padding: 0;
+                }
+            }
+
+            input[type=checkbox]:checked + span {
+                &:before {
+                    background: #0078D7;
+                    box-shadow: inset 0 0 0 1px #0078D7;
+                    outline: 1px dotted #0078D7;
+                }
+                &:after {
+                    font-size: 12px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

@@ -83,6 +83,7 @@
     "@types/superagent": "^3.5.0",
     "@types/uuid": "^3.0.0",
     "@types/webpack-env": "^1.13.0",
+    "classnames-minimal": "^1.0.0",
     "crypto-js": "^3.1.9-1",
     "edge": "^7.10.1",
     "es6-promise": "^3.1.2",

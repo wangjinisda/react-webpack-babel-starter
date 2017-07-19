@@ -1,0 +1,19 @@
+$dir: "rtl";
+
+html {
+    direction: rtl;
+}
+
+.spza_filterGroup{
+    &.product .spza_filterItems {
+        margin-right: 10px;
+        margin-left: 0 !important;
+    }
+
+    .spza_filterItems .filterPaneItemRoot>div>.filterItem>label {
+        margin-right: 10px;
+        margin-left: 0 !important;
+    }
+}
+
+@import "./styles";

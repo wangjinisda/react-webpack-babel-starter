@@ -1,3 +1,5 @@
 src/resources
 src/_shared/styles
 src/client/styles
+src/market/mac/styles
+src/market/shared/styles
