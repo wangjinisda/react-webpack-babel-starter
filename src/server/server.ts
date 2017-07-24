@@ -26,8 +26,14 @@ app.get('/', function (req, res) {
 
   res.send(template({
     name: 'test',
-    title: 'jiwag title'
+    title: 'jiwag title',
+    data:{
+      name: 'test',
+      title: 'jiwag title',
+    }
   }));
+
+
 });
 
 
