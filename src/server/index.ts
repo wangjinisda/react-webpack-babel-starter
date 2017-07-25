@@ -4,11 +4,10 @@ import "./server";
 const edge = require('edge');
 
 const path       = require("path");
-const file = require( '../resources/Dlls/Microsoft.SaaSMarketPlace.Common.dll');
+// const file = require( '../resources/Dlls/Microsoft.SaaSMarketPlace.Common.dll');
 const wj = require( './../resources/Dlls/Sample105.dll');
 
-
-console.log(file);
+console.log(wj);
 
 function getCLRMethod(methodName: string) {
         return edge.func(wj);
@@ -31,3 +30,6 @@ clrDebug(12, function (error:any, result:any) {
 	if (error) throw error;
 	console.log(result);
 });
+
+
+process.env.serverUrl = ''

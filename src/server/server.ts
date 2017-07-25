@@ -1,19 +1,22 @@
 // var express = require("express");
 // 
 // var webpack = require("webpack");
-'use strict';
 
-import * as express from "express";
+import * as express   from "express";
+import * as auth      from "./auth/auth";
+
 const { resolve } = require("path");
-
 const pug         = require('pug');
+
 const https       = require('https');
 const fs          = require('fs');
 
-let template = require("./../pug/views/index.pug");
-let app      = express();
+let template      = require("./../pug/views/index.pug");
+let app           = express();
 
 app.use(express.static(resolve(process.cwd(), './public')));
+
+app.use(auth.authHandler());
 
 app.use(
   (req: any, res: any, next: any) => {
@@ -22,9 +25,12 @@ app.use(
     next();
   });
 
+
+
+
 app.get('/', function (req, res) {
 
-  res.send(template({
+  res.status(200).type('.html').send(template({
     name: 'test',
     title: 'jiwag title',
     data:{
@@ -32,8 +38,6 @@ app.get('/', function (req, res) {
       title: 'jiwag title',
     }
   }));
-
-
 });
 
 

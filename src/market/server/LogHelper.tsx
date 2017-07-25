@@ -13,7 +13,7 @@ const jwt = require('jsonwebtoken');
 let sha256 = require('crypto-js/sha256');
 let agentParser = require('ua-parser-js');
 const uuid = require('uuid');
-const dll = require('./../../dist/Microsoft.SaaSMarketPlace.Common.dll');
+const dll = require('./../../resources/Dlls/Microsoft.SaaSMarketPlace.Common.dll');
 export module Logger {
 
     const LoggerDll: string = process.env.LOGGER_DLL_PATH || path.normalize(dll);
