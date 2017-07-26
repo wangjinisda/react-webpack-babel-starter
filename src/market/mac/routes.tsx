@@ -23,8 +23,7 @@ import { FieldHub } from './../shared/containers/fieldHub';
 
 import * as React from 'react';
 
-let Route = require('react-router').Route;
-let IndexRoute = require('react-router').IndexRoute;
+let { Route, IndexRoute }= require('react-router');
 // todo: typings for react-router give me error on HistoryModule, so turning them off
 // import {Route}  from 'react-router';
 // import {IndexRoute} from 'react-router';

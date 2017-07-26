@@ -25,6 +25,8 @@ declare var window: any;
 
 let initialState = window.__INITIAL_STATE__;
 
+delete window.__INITIAL_STATE__;
+
 decodeVulnerableDataInInitalState(initialState);
 
 // Transform into Immutable.js collections,
