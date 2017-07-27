@@ -3,6 +3,8 @@ html
   include includes/head.pug
   body
     main
-    #root
-      #app!= html
+    #root!= html
+    script(src='/chunks.js')
+    script(src='/vendor.js')
+    script(src='/main.js')
     include includes/foot.pug

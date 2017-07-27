@@ -12,9 +12,13 @@ import routes from './routes'
 let { Router, browserHistory } = require('react-router');
 
 // import { Router, browserHistory } from 'react-router';
+declare var window: any;
 
-let __INITIAL_STATE__ = {}
-const store = configureStore(browserHistory, __INITIAL_STATE__)
+let initialState = window.__INITIAL_STATE__;
+
+delete window.__INITIAL_STATE__;
+
+const store = configureStore(browserHistory, initialState)
 const history = historyCreator(store)(browserHistory)
 
 render(

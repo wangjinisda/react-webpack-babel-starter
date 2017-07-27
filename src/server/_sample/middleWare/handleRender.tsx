@@ -1,22 +1,20 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 
-import { Provider } from 'react-redux'
 import { appHistory, historyCreator } from './../../../market/shared/routerHistory'
-
 import { configureStore } from './../../../_sample/store'
+
 import routes from './../../../_sample/routes'
-
 import { Router, match } from 'react-router';
-
 
 // import createHistory from 'react-router/lib/createMemoryHistory';
 
 let createHistory = require('react-router/lib/createMemoryHistory');
-let { RouterContext } = require('react-redux');
+let { Provider } = require('react-redux');
+let { RouterContext } = require('react-router');
 let { renderToString } = require('react-dom/server');
 
-let { ReduxAsyncConnect, loadOnServer, reducer } = require('redux-async-connect')
+// let { ReduxAsyncConnect, loadOnServer, reducer } = require('redux-async-connect')
 let template = require("./../../../pug/views/server_index.pug");
 
 export let serverRenderHandler = () => {
@@ -34,17 +32,17 @@ export let serverRenderHandler = () => {
                 console.error('ROUTER ERROR: test');
                 res.status(500);
             } else if (renderProps) {
-                let InitialComponent = React.createElement(
-                    Provider,
-                    { store: store },
-                    React.createElement(RouterContext, renderProps)
+                const appHTML = renderToString(
+                    <Provider store={store} key="provider">
+                        <RouterContext {...renderProps} />
+                    </Provider>
                 );
-                const appHTML = renderToString(InitialComponent);
 
                 // 3. render the Redux initial data into the server markup
-
+                let currentState = store.getState();
                 const _html = template({
-                    html: appHTML
+                    html: appHTML,
+                    state_data: currentState
                 })
                 res.send(_html);
             }
