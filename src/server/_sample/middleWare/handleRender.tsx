@@ -15,7 +15,7 @@ let { RouterContext } = require('react-router');
 let { renderToString } = require('react-dom/server');
 
 // let { ReduxAsyncConnect, loadOnServer, reducer } = require('redux-async-connect')
-let template = require("./../../../pug/views/server_index.pug");
+let template = require("./../../../pug/views/sample_index.pug");
 
 export let serverRenderHandler = () => {
 
