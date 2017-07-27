@@ -20,6 +20,7 @@ import { initBrowserConfig } from '../shared/services/init/initBrowser';
 import Routes from './routes';
 import { decodeVulnerableDataInInitalState } from '../shared/utils/appUtils';
 import * as ReactUtils from '../shared/utils/reactUtils';
+let { browserHistory } = require('react-router');
 
 declare var window: any;
 
@@ -65,7 +66,7 @@ if (href !== hrefWithoutConsecutiveSlashes) {
 // This is required to create the singleton history object used below by the Router
 // The same object will also be used for triggering navigations
 // initRouterHistory();
-historyCreator(store)();
+historyCreator(store)(browserHistory);
 
 // do not move this call around - it will take the current time as a measure of 'performance', so moving
 // where we call this from is a breaking change (performance graphs will break)
