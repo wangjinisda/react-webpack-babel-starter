@@ -11,13 +11,20 @@ import { configureStore } from './store'
 import routes from './routes'
 let { Router, browserHistory } = require('react-router');
 
-let __INITIAL_STATE__ = {}
-const store = configureStore(browserHistory, __INITIAL_STATE__)
-const history = historyCreator(store)();
+// import { Router, browserHistory } from 'react-router';
+declare var window: any;
 
+let initialState = window.__INITIAL_STATE__;
+
+delete window.__INITIAL_STATE__;
+
+const store = configureStore(initialState)
+const history = historyCreator(store)(browserHistory)
 
 render(
   <Provider store={store}>
-    <Router history={history} routes={routes} />
+    <Router history={history} >
+      {routes}
+    </Router>
   </Provider>
-, document.getElementById('root'))
+  , document.getElementById('root'))

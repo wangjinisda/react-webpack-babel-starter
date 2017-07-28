@@ -3,10 +3,9 @@
 // var webpack = require("webpack");
 
 import * as express   from "express";
-import * as auth      from "./auth/auth";
+import * as auth      from "./../auth/auth";
 
-import { serverRenderHandler }      from "./render/handleRender";
-import { serverRegionHandler } from './middleWare/regeionHandler';
+import { serverRenderHandler }      from "./middleWare/handleRender";
 
 const { resolve } = require("path");
 const pug         = require('pug');
@@ -14,7 +13,6 @@ const pug         = require('pug');
 const https       = require('https');
 const fs          = require('fs');
 
-let template      = require("./../pug/views/index.pug");
 let app           = express();
 
 app.use(express.static(resolve(process.cwd(), './public')));
@@ -27,16 +25,12 @@ app.use(
     req.RequestStart = Date.now();
     next();
   });
-
-app.get('/', serverRegionHandler());
-
-
+  
 app.use(serverRenderHandler());
 
-
 const options = {
-    key: fs.readFileSync(require('./../resources/certs/key.pem')),
-    cert: fs.readFileSync(require('./../resources/certs/cert.pem'))
+    key: fs.readFileSync(require('./../../resources/certs/key.pem')),
+    cert: fs.readFileSync(require('./../../resources/certs/cert.pem'))
 };
 
 https.createServer(options, app)

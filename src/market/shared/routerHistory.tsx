@@ -24,8 +24,8 @@ export const initRouterHistory = (embedded = false) => {
 */
 
 export const historyCreator = (store: any) =>{
-    return (): void => {
-        appHistory = syncHistoryWithStore(browserHistory, store)
+    return (history: History): any => {
+        appHistory = syncHistoryWithStore(history, store)
         return appHistory;
     }
 }

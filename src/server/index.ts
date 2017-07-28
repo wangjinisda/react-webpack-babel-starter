@@ -1,6 +1,7 @@
 'use strict';
 // server entry
 import "./server";
+// import "./_sample/server_sample";
 const edge = require('edge');
 
 const path       = require("path");
