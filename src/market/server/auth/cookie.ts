@@ -38,7 +38,8 @@ export class SpzaCookie {
         if (!req.cookies || !req.cookies[this.cookieMark]) {
             return {
                 return: null,
-                error: 'Failed to read cookie since cookie does not contain ' + this.cookieMark + 'entry'};
+                error: 'Failed to read cookie since cookie does not contain ' + this.cookieMark + 'entry'
+            };
         };
         return this.parse(req.cookies[this.cookieMark]);
     }
@@ -48,7 +49,7 @@ export class SpzaCookie {
             return {
                 return: null,
                 error: 'Failed to write to cookie since res object does not exist.'
-            } ;
+            };
         };
 
         let stringifyResult = this.stringify();
@@ -148,7 +149,7 @@ export class SpzaCookie {
         try {
             let decryptedString = secUtils.decrypt(encryptedText);
             let protectedInfo = JSON.parse(decryptedString);
-            if (!protectedInfo || protectedInfo.r == null || protectedInfo.i == null ) {
+            if (!protectedInfo || protectedInfo.r == null || protectedInfo.i == null) {
                 throw new Error('refresh token or idtoken payload field do not exist in current cookie');
             };
 
@@ -173,3 +174,23 @@ export function saveAppsourceLead(user: any, res: any) {
     };
     res.cookie(leadMark, JSON.stringify(u), CookieOption);
 }
+
+export function saveSpzaLocale(locale: string, res: any) {
+
+    let leadMark = Constants.Cookies.LocaleCookie;
+    let u = locale;
+    res.cookie(leadMark, JSON.stringify(u), CookieOption);
+}
+
+export function loadSpzaLocale(req: any) {
+
+    let leadMark = Constants.Cookies.LocaleCookie;
+    if (!req.cookies || !req.cookies[leadMark]) {
+        return {
+            return: null,
+            error: 'Failed to read cookie since cookie does not contain ' + leadMark + 'entry'
+        };
+    };
+    return this.parse(req.cookies[leadMark]);
+}
+

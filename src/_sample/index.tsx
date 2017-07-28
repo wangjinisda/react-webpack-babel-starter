@@ -18,7 +18,7 @@ let initialState = window.__INITIAL_STATE__;
 
 delete window.__INITIAL_STATE__;
 
-const store = configureStore(browserHistory, initialState)
+const store = configureStore(initialState)
 const history = historyCreator(store)(browserHistory)
 
 render(

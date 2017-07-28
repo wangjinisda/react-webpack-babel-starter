@@ -5,6 +5,9 @@
 import * as express   from "express";
 import * as auth      from "./auth/auth";
 
+import { serverRenderHandler }      from "./render/handleRender";
+import { serverRegionHandler } from './middleWare/regeionHandler';
+
 const { resolve } = require("path");
 const pug         = require('pug');
 
@@ -25,20 +28,10 @@ app.use(
     next();
   });
 
+app.get('/', serverRegionHandler());
 
 
-
-app.get('/', function (req, res) {
-
-  res.status(200).type('.html').send(template({
-    name: 'test',
-    title: 'jiwag title',
-    data:{
-      name: 'test',
-      title: 'jiwag title',
-    }
-  }));
-});
+app.use(serverRenderHandler());
 
 
 const options = {
