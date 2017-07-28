@@ -41,3 +41,8 @@ Minimal starter kit with hot module replacement for fast development.
 
 ## Resources
 * [Create React App (by FaceBook)](https://github.com/facebookincubator/create-react-app) - Good starting point when learning React
+
+
+# next task
+need a middleware to assign cookie string to a enumerable Object 
+then you can access cookie via req.cookie['indexString']
