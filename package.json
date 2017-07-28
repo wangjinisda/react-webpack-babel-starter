@@ -104,7 +104,6 @@
     "react-router-redux": "^4.0.4",
     "react-selectize": "^2.0.2",
     "redux": "^3.5.2",
-    "redux-async-connect": "^1.0.0-rc4",
     "redux-thunk": "^2.0.1",
     "stack-trace": "0.0.10",
     "stacktrace-js": "^2.0.0",
